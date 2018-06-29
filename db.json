@@ -2,7 +2,23 @@
   "users": [
     {
       "id": 0,
-      "name": "Gavin"
+      "name": "Gavin",
+      "totalPosts": 120
+    },
+    {
+      "id": 1,
+      "name": "User2",
+      "totalPosts": 120
+    },
+    {
+      "id": 2,
+      "name": "User3",
+      "totalPosts": 120
+    },
+    {
+      "id": 3,
+      "name": "User4",
+      "totalPosts": 120
     }
   ]
 }
