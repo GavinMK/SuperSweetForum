@@ -19,12 +19,6 @@ export class LoginDialogComponent {
     this.initializeUser();
   }
 
-  login(user: any) {
-    this.userService.login(user.name, user.password).subscribe(userLogged => {
-      this.dialogRef.close();
-    });
-  }
-
   private initializeUser () {
     this.user = {
       id: null,

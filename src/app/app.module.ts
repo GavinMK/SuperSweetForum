@@ -33,17 +33,9 @@ import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.com
 
 import { LoginDialogComponent } from './login/login-dialog.component';
 
-import { StorageServiceModule } from 'angular-webstorage-service';
-import {LocalStorageService} from './shared/services/local-storage.service';
-
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
-import { LoginComponent } from './login/login.component';
-
-import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
-import { AppToolbarContainerComponent } from './app-toolbar-container/app-toolbar-container.component';
-
-import {EventBusService} from './shared/services/event-bus.service';
+import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-container.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +53,8 @@ import {EventBusService} from './shared/services/event-bus.service';
     UsernameValidatorDirective,
     ReplyCreatorComponent,
     PostCreatorConfirmDialogComponent,
-    LoginComponent,
+    AppToolbarContainerComponent,
+    LoginDialogComponent
   ],
   entryComponents: [
     LoginDialogComponent,
@@ -76,8 +69,7 @@ import {EventBusService} from './shared/services/event-bus.service';
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
     MatModule,
-    FlexLayoutModule,
-    StorageServiceModule
+    FlexLayoutModule
   ],
   providers: [
     UserService,
@@ -85,9 +77,6 @@ import {EventBusService} from './shared/services/event-bus.service';
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
     UsersResolver,
-    LocalStorageService,
-    UserLoggedResolver,
-    EventBusService,
     PostCreatorDeactivateGuard
   ],
   bootstrap: [AppComponent]
