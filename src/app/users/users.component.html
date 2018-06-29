@@ -1,0 +1,5 @@
+<mat-list>
+    <mat-list-item *ngFor="let user of users" [routerLink]="['/users', user.id]"> 
+            {{user.id}} {{user.name}} - Total Posts:  {{user.totalPosts}}
+    </mat-list-item>
+</mat-list>

@@ -6,19 +6,27 @@ import {UserService} from './users/user.service';
 import {API_PATH} from './app.tokens';
 import {HttpClientModule} from '@angular/common/http';
 import {MatModule} from './mat.module';
+import {APP_ROUTES} from './app.routes';
+import {RouterModule} from '@angular/router';
+import {UsersComponent} from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES),
     MatModule
   ],
   providers: [
     UserService,
     { provide: API_PATH, useValue: 'http://localhost:3000'}],
+    
   bootstrap: [AppComponent]
 })
 export class AppModule { }
