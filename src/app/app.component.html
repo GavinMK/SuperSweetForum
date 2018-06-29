@@ -3,4 +3,15 @@
       <a routerLink="/" class="mainPageLink">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Super Sweet Forum! ✧ﾟ･: *ヽ(◕ヮ◕ヽ)</a>
     </div>
 </mat-toolbar>
+<div>
+    <a mat-button color="orange" [routerLink]="['/recent-threads']">
+        RECENT THREADS
+    </a>
+    <a mat-button [routerLink]="['/users']">
+        USERS
+    </a>
+    <a mat-button [routerLink]="['/threads']">
+        THREADS
+    </a>
+</div>
 <router-outlet></router-outlet>
