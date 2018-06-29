@@ -1,12 +1,1 @@
-<mat-toolbar>
-  <mat-form-field color="accent" class="search">
-    <input matInput type="text"
-    (input)="term$.next($event.target.value)">
-  </mat-form-field>
-</mat-toolbar>
-<mat-list>
-  <a mat-list-item
-     *ngFor="let thread of thread$ | async; trackBy:trackById"
-     title="Thread {{ thread.title }}">
-  </a>
-</mat-list>
+<router-outlet></router-outlet>

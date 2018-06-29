@@ -23,7 +23,7 @@ export class ThreadsService {
   }
 
   rawSearch(term: string): Observable<Thread[]>{
-    return this.http.get<Thread[]>(`${this.apiPath}/threadsq?=${term}`)
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?q=${term}`)
   }
 
   search(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{
