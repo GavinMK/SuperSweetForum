@@ -4,8 +4,11 @@
         <mat-card-subtitle>{{user?.bio.email}}</mat-card-subtitle>
     </mat-card-title-group>
     <mat-card-content>
-    <a mat-button [routerLink]="['/', 'threads', user?.id]">
+    <a mat-button color="primary" [routerLink]="['/', 'threads', user?.id]">
         Show threads
+    </a>
+    <a mat-button color="primary" [routerLink]="['/', 'threads', 'new']" [queryParams]="{userId: 'user.id'}">
+        New thread
     </a>
     </mat-card-content>
 </mat-card>

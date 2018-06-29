@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-form-field>
+        <mat-select placeholder="Filter by" (selectionChange)="filterTimeOptionChange$.next($event.value)">
+            <mat-option *ngFor="let filterTimeOption of filterTimeOptions" [value]="filterTimeOption.value">
+                {{filterTimeOption.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</mat-card>
+<mat-list *ngFor="let thread of recentThreads">
+    <app-thread-details-presentation [thread]="thread"></app-thread-details-presentation>
+</mat-list>
+<mat-card *ngIf="recentThreads.length === 0">
+    <mat-card-content>
+        No recent posts!
+    </mat-card-content>
+</mat-card>

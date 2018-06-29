@@ -23,6 +23,9 @@ import {ThreadsResolver} from './threads/threads.resolver'
 import { ThreadsService } from './threads/threads.service';
 
 import {UsersResolver} from './users/users.resolver';
+import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
+
+import {FilterTimeOptionService} from './shared/filter-time-option/filter-time-option.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import {UsersResolver} from './users/users.resolver';
     ThreadsComponent,
     TopicPageComponent,
     ThreadDetailsComponent,
-    ThreadDetailsPresentationComponent
+    ThreadDetailsPresentationComponent,
+    RecentThreadsComponent
   ],
   imports: [
     MatModule,
@@ -45,6 +49,7 @@ import {UsersResolver} from './users/users.resolver';
   ],
   providers: [
     UserService,
+    FilterTimeOptionService,
     ThreadsService,
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,

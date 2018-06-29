@@ -8,4 +8,5 @@ export interface Thread {
   title: string;
   body: string;
   replies: Reply[];
+  createdDate: Date;
 }
