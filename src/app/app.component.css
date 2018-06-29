@@ -1,0 +1,16 @@
+.mainPageLink {
+  color:black;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
+mat-card.reply {
+  background-color: cornsilk;
+  padding: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+
+
+}

@@ -37,7 +37,13 @@
     {
       "id": 0,
       "title": "Gavin's Cool Post",
-      "body": "This is the first post on this super sweet forum!"
+      "body": "This is the first post on this super sweet forum!",
+      "replies": [
+        {
+          "id": "0:0",
+          "body": "Hey Gavin, it's Gavin. Cool Forum"
+        }
+      ]
     }
   ]
 }
