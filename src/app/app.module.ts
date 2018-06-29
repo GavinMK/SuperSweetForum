@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {UserService} from './users/user.service';
 import {API_PATH} from './app.tokens';
 import {HttpClientModule} from '@angular/common/http';
+import {MatModule} from './mat.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MatModule
   ],
   providers: [
     UserService,
