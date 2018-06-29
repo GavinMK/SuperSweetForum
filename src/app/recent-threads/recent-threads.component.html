@@ -6,14 +6,17 @@
     </button>
 </mat-card>
 <mat-list *ngFor="let thread of recentThreads">
-    <a mat-list-item
-        [routerLink]="['/threads', thread.id]"
-        title="Thread {{ thread.title }}">
-       <h3 mat-line>{{ thread.title }}</h3>
+    <a [routerLink]="['/threads', thread.id]">
+        <mat-card mat-list-item>
+            <h3 mat-line>{{ thread.title }}</h3>
+            <mat-chip-list>
+                <mat-chip>{{ !thread.poster || thread.poster?.length === 0 ? 'Anonymous' : thread.poster }}</mat-chip>
+            </mat-chip-list>
+        </mat-card>
     </a>
 </mat-list>
 <mat-card *ngIf="recentThreads.length === 0">
     <mat-card-content>
-        No recent posts!
+        No recent Threads!
     </mat-card-content>
 </mat-card>
