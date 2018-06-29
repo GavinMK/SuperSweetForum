@@ -102,7 +102,6 @@
       ]
     },
     {
-
       "id": 1,
       "title": "Super Cool Thread number 1!",
       "body": "This is the first post on this super sweet forum!",
@@ -111,9 +110,9 @@
           "id": "0:0",
           "body": "Hey Gavin, it's Gavin. Cool Forum"
         }
-      ]},
-      {
-
+      ]
+    },
+    {
       "title": "Super Cool Thread number 2!",
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
       "id": 1
@@ -128,7 +127,24 @@
       "body": "I spent too long trying to figure this out! :C but its okay now since the editor is now reachable by the rest of the app",
       "poster": "",
       "id": 3
-
+    },
+    {
+      "title": "test",
+      "body": "testdfsfsdf testdfsfsdftestdfsfsdftestdfsfsdftestdfsfsdftestdfsfsdftestdfsfsdftestdfsfsdftestdfsfsdftestdfsfsdf",
+      "poster": "test-user",
+      "id": 4
+    },
+    {
+      "title": "TTTTTTTTTTTEEEST",
+      "body": "TTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEEST",
+      "poster": "",
+      "id": 5
+    },
+    {
+      "title": "TTEST",
+      "body": "TEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEET",
+      "poster": "USERNAME",
+      "id": 6
     }
   ]
 }

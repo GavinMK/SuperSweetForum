@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {Thread} from '../models/thread';
 import {ThreadsService} from '../threads/threads.service';
 import { map, switchMap, startWith, scan, tap } from 'rxjs/operators';
-import {FilterTimeOption} from '../models/filter-time-option';
-import {FilterTimeOptionService} from '../shared/filter-time-option/filter-time-option.service';
 import { Subject } from 'rxjs';
 
 @Component({

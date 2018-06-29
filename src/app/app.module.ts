@@ -26,8 +26,6 @@ import { ThreadsService } from './threads/threads.service';
 import {UsersResolver} from './users/users.resolver';
 import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
 
-import {FilterTimeOptionService} from './shared/filter-time-option/filter-time-option.service';
-
 import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UsernameValidatorDirective } from './threads/username-validator.directive';
@@ -63,7 +61,6 @@ import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.com
   ],
   providers: [
     UserService,
-    FilterTimeOptionService,
     ThreadsService,
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
