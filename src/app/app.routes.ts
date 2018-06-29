@@ -10,7 +10,7 @@ import {UsersResolver} from './users/users.resolver';
 import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
 
 export const APP_ROUTES: Routes = [
-  { path: 'recent-posts', component: RecentThreadsComponent },
+  { path: 'recent-threads', component: RecentThreadsComponent },
   { path: 'users', component: UsersDashboardComponent, children: [
     { path: '', redirectTo: '0', pathMatch: 'full'},
     { path: ':id', component: UserDetailComponent, resolve: {

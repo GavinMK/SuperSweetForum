@@ -99,8 +99,18 @@
           "id": "0:0",
           "body": "Hey Gavin, it's Gavin. Cool Forum"
         }
-      ],
-      "createdDate": 1530277190506
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Gavin's Cool Post 2",
+      "body": "This is the first post on this super sweet forum!",
+      "replies": [
+        {
+          "id": "0:0",
+          "body": "Hey Gavin, it's Gavin. Cool Forum"
+        }
+      ]
     }
   ]
 }

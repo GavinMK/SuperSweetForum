@@ -1,11 +1,9 @@
 <mat-card>
-    <mat-form-field>
-        <mat-select placeholder="Filter by" (selectionChange)="filterTimeOptionChange$.next($event.value)">
-            <mat-option *ngFor="let filterTimeOption of filterTimeOptions" [value]="filterTimeOption.value">
-                {{filterTimeOption.viewValue}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+    <button mat-button (click)="orderStateToogle$.next()">
+        Order
+        <mat-icon color="accent" *ngIf="orderState < 0">keyboard_arrow_up</mat-icon>
+        <mat-icon color="accent" *ngIf="orderState > 0">keyboard_arrow_down</mat-icon>
+    </button>
 </mat-card>
 <mat-list *ngFor="let thread of recentThreads">
     <app-thread-details-presentation [thread]="thread"></app-thread-details-presentation>
