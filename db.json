@@ -4,7 +4,7 @@
       "id": 0,
       "name": "Gavin",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test0@email.com"
       }
     },
@@ -12,7 +12,7 @@
       "id": 1,
       "name": "User2",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test1@email.com"
       }
     },
@@ -20,7 +20,7 @@
       "id": 2,
       "name": "User3",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test2@email.com"
       }
     },
@@ -28,7 +28,7 @@
       "id": 3,
       "name": "User4",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test3@email.com"
       }
     }

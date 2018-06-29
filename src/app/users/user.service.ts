@@ -10,8 +10,8 @@ export class UserService {
 
   constructor(private http: HttpClient, @Inject(API_PATH) private apiPath) { }
 
-  getUser(id: string): Observable<Object> {
-    return this.http.get(`${this.apiPath}/users/${id}`);
+  getUser(id: string): Observable<User> {
+    return this.http.get<User>(`${this.apiPath}/users/${id}`);
   }
 
   getAllUsers(): Observable<Array<User>> {

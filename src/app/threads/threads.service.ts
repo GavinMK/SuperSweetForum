@@ -26,7 +26,7 @@ export class ThreadsService {
   }
 
   search(terms$, debounce = 200){
-    return terms$.pipe(debounceTime(debounce), distinctUntilChanged(), switchMap(terms => this.rawSearch(terms)));
+    //return terms$.pipe(debounceTime(debounce), distinctUntilChanged(), switchMap(terms => this.rawSearch(terms)));
   }
 
 

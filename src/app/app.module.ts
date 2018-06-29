@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import {UserService} from './users/user.service';
@@ -10,6 +11,7 @@ import {APP_ROUTES} from './app.routes';
 import {RouterModule} from '@angular/router';
 import {UsersComponent} from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     UserDetailComponent
   ],
   imports: [
+    MatModule,
+    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(APP_ROUTES),
-    MatModule
+    FlexLayoutModule
   ],
   providers: [
     UserService,
