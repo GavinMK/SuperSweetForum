@@ -18,4 +18,8 @@ export class UserService {
     return this.http.get<Array<User>>(`${this.apiPath}/users`);
   }
 
+  getFilteredUsersByName(name: string): Observable<Array<User>> {
+    return this.http.get<Array<User>>(`${this.apiPath}/users?q=${name}`);
+  }
+
 }

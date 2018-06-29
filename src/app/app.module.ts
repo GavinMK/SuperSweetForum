@@ -12,12 +12,14 @@ import {RouterModule} from '@angular/router';
 import {UsersComponent} from './users/users.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UsersDashboardComponent } from './users-dashboard/users-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UsersDashboardComponent
   ],
   imports: [
     MatModule,

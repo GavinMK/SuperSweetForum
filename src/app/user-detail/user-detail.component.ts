@@ -20,7 +20,6 @@ export class UserDetailComponent implements OnInit {
     this.route.params.pipe(
       switchMap(params => this.userService.getUser(params["id"]))
     ).subscribe(user => {
-      console.log(user)
       this.user = user;
     })
   }

@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+
 import {
   MatButtonModule,
   MatCheckboxModule,
@@ -11,7 +12,9 @@ import {
   MatTabsModule,
   MatToolbarModule,
   MatListModule,
-  MatCardModule
+  MatCardModule,
+  MatChipsModule,
+  MatSidenavModule
 } from '@angular/material';
 
 
@@ -28,7 +31,9 @@ import {
     MatTabsModule,
     MatSelectModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatChipsModule,
+    MatSidenavModule
   ]
 })
 export class MatModule { }
