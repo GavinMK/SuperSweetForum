@@ -89,15 +89,20 @@
       }
     }
   ],
+  "totalPosts": {
+    "num": 8
+  },
   "threads": [
     {
       "id": 0,
+      "postnum": 0,
       "title": "Gavin's Cool Post",
       "body": "This is the first post on this super sweet forum!",
       "poster": "Gavin",
       "replies": [
         {
           "id": "0:0",
+          "postnum": 1,
           "body": "Hey Gavin, it's Gavin. Cool Forum"
         },
         {
@@ -109,6 +114,10 @@
           "body": "Ey whats's uppppppppppppppppp!",
           "poster": "",
           "id": "0:2"
+        },
+        {
+          "body": "Eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy!",
+          "poster": ""
         }
       ]
     },
@@ -120,6 +129,15 @@
         {
           "id": "0:0",
           "body": "Hey Gavin, it's Gavin. Cool Forum"
+        },
+        {
+          "id": "0:1",
+          "body": "Hey Gavin, it's Gavin. Cool Forum"
+        },
+        {
+          "body": "If you're seeing this post, then that means my deactivation guard is working correctly!",
+          "poster": "Not Gavin",
+          "id": "0:2"
         }
       ]
     },

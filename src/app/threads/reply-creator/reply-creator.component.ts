@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {Reply, Thread} from '../../models/thread';
 import {ThreadsService} from '../threads.service';
 import {map} from 'rxjs/operators';
+import {waitForMap} from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-reply-creator',
@@ -14,6 +15,7 @@ export class ReplyCreatorComponent implements OnInit {
 
   thread: Thread;
   form: FormGroup;
+  saved: boolean = false;
 
   constructor(
     private builder: FormBuilder,
@@ -39,10 +41,12 @@ export class ReplyCreatorComponent implements OnInit {
   }
 
   save(reply: Reply){
-    reply.id = `${this.thread.id}:${this.thread.replies.length}`;
     this.thread.replies.push(reply);
     this.threadService.updateThread(this.thread)
-      .subscribe(() => this.router.navigate(['../'], {relativeTo: this.route}));
+      .subscribe(() => {
+        this.saved = true;
+        this.router.navigate(['../'], {relativeTo: this.route})
+      });
 
 
   }

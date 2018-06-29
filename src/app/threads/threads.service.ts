@@ -5,6 +5,8 @@ import {Thread} from '../models/thread';
 import {debounceTime, tap, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
+interface postsInterface { num: number }
+
 @Injectable()
 export class ThreadsService {
 

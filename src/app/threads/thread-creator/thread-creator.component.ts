@@ -15,6 +15,7 @@ export class ThreadCreatorComponent implements OnInit {
 
   form: FormGroup;
   user: FormControl;
+  saved: boolean = false;
 
   constructor(
     private builder: FormBuilder,
@@ -32,7 +33,10 @@ export class ThreadCreatorComponent implements OnInit {
   }
 
   save(thread: Thread){
-    this.threadService.addThread(thread).subscribe(() => this.router.navigate(["/threads"]))
+    this.threadService.addThread(thread).subscribe(() => {
+      this.saved = true;
+      this.router.navigate(["/threads"])
+    })
   }
 
 

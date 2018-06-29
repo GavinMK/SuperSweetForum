@@ -30,10 +30,14 @@ import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UsernameValidatorDirective } from './threads/username-validator.directive';
 import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
+
 import { LoginDialogComponent } from './login/login-dialog.component';
 
 import { StorageServiceModule } from 'angular-webstorage-service';
 import {LocalStorageService} from './shared/services/local-storage.service';
+
+import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
+import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
 
 import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
 import { AppToolbarContainerComponent } from './app-toolbar-container/app-toolbar-container.component';
@@ -55,8 +59,13 @@ import {EventBusService} from './shared/services/event-bus.service';
     ThreadCreatorComponent,
     UsernameValidatorDirective,
     ReplyCreatorComponent,
+    PostCreatorConfirmDialogComponent,
     LoginDialogComponent,
     AppToolbarContainerComponent
+  ],
+  entryComponents: [
+    LoginDialogComponent,
+    PostCreatorConfirmDialogComponent,
   ],
   imports: [
     MatModule,
@@ -78,10 +87,8 @@ import {EventBusService} from './shared/services/event-bus.service';
     UsersResolver,
     LocalStorageService,
     UserLoggedResolver,
-    EventBusService
-  ],
-  entryComponents: [
-    LoginDialogComponent
+    EventBusService,
+    PostCreatorDeactivateGuard
   ],
   bootstrap: [AppComponent]
 })

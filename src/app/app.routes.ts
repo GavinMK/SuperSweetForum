@@ -11,6 +11,7 @@ import {ReplyCreatorComponent} from './threads/reply-creator/reply-creator.compo
 
 import {UsersResolver} from './users/users.resolver';
 import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
+import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 
 import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
 
@@ -37,9 +38,9 @@ export const APP_ROUTES: Routes = [
       { path: '', redirectTo: 'threads', pathMatch: 'full'},
       { path: 'threads', component: ThreadsComponent, children: [
           { path: '', component: TopicPageComponent },
-          { path: 'new', component: ThreadCreatorComponent },
+          { path: 'new', component: ThreadCreatorComponent, canDeactivate: [PostCreatorDeactivateGuard] },
           { path: ':id', component: ThreadDetailsComponent, resolve: { thread: ThreadsResolver }},
-          { path: ':id/reply', component: ReplyCreatorComponent, resolve: { thread: ThreadsResolver} }
+          { path: ':id/reply', component: ReplyCreatorComponent, resolve: { thread: ThreadsResolver}, canDeactivate: [PostCreatorDeactivateGuard] }
         ] },
       { path: '**', redirectTo: '/' }
   ]}
