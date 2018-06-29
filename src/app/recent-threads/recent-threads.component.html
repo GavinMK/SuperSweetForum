@@ -6,7 +6,11 @@
     </button>
 </mat-card>
 <mat-list *ngFor="let thread of recentThreads">
-    <app-thread-details-presentation [thread]="thread"></app-thread-details-presentation>
+    <a mat-list-item
+        [routerLink]="['/threads', thread.id]"
+        title="Thread {{ thread.title }}">
+       <h3 mat-line>{{ thread.title }}</h3>
+    </a>
 </mat-list>
 <mat-card *ngIf="recentThreads.length === 0">
     <mat-card-content>
