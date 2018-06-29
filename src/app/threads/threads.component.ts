@@ -18,7 +18,7 @@ export class ThreadsComponent implements OnInit {
   ngOnInit() {
     const initial$ = this.threadService.getThreads();
     const search$ = this.threadService.search(this.term$);
-    this.thread$ = concat(initial$, search$);
+    //this.thread$ = concat(initial$, search$);
 
   }
 
