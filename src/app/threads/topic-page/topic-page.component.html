@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <mat-form-field color="accent" class="search">
+    <input matInput type="text"
+           (input)="term$.next($event.target.value)">
+  </mat-form-field>
+</mat-toolbar>
+<mat-list>
+  <a mat-list-item
+     *ngFor="let thread of thread$ | async; trackBy:trackById"
+     [routerLink]="['/threads', thread.id]"
+     title="Thread {{ thread.title }}">
+    <h3 mat-line>{{ thread.title }}</h3>
+  </a>
+</mat-list>

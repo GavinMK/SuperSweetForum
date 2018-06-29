@@ -3,6 +3,7 @@ import { UserService } from './user.service';
 import { Subject } from 'rxjs';
 import {switchMap, debounceTime} from 'rxjs/operators';
 import {User} from '../models/user';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
     selector: 'ssf-users',
@@ -14,7 +15,7 @@ export class UsersComponent implements OnInit{
     users: Array<User>;
     search$ = new Subject<string>();
 
-    constructor(private userService: UserService) {}
+    constructor(private userService: UserService, private route: ActivatedRoute) {}
 
     ngOnInit() {
         this.userService.getAllUsers().subscribe(users => {

@@ -4,6 +4,8 @@
         <mat-card-subtitle>{{user?.bio.email}}</mat-card-subtitle>
     </mat-card-title-group>
     <mat-card-content>
-      Bio content here!
+    <a mat-button [routerLink]="['/', 'threads', user?.id]">
+        Show threads
+    </a>
     </mat-card-content>
 </mat-card>
