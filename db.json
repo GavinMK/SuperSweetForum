@@ -102,15 +102,33 @@
       ]
     },
     {
+
       "id": 1,
-      "title": "Gavin's Cool Post 2",
+      "title": "Super Cool Thread number 1!",
       "body": "This is the first post on this super sweet forum!",
       "replies": [
         {
           "id": "0:0",
           "body": "Hey Gavin, it's Gavin. Cool Forum"
         }
-      ]
+      ]},
+      {
+
+      "title": "Super Cool Thread number 2!",
+      "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
+      "id": 1
+    },
+    {
+      "title": "Log number three",
+      "body": "This is an example post again. It needs to have at least 100 characters or it will not let me press the post butotn. Now that it does, I can.",
+      "id": 2
+    },
+    {
+      "title": "Gavin New Post",
+      "body": "I spent too long trying to figure this out! :C but its okay now since the editor is now reachable by the rest of the app",
+      "poster": "",
+      "id": 3
+
     }
   ]
 }

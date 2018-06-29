@@ -1,8 +1,9 @@
 <mat-toolbar>
-  <mat-form-field color="accent" class="search">
-    <input matInput type="text"
+  <mat-form-field fxFlex color="primary" class="search">
+    <input title="search" matInput type="text"
            (input)="term$.next($event.target.value)">
   </mat-form-field>
+  <button fxFlex mat-button routerLink="/threads/new">Make a New Thread!</button>
 </mat-toolbar>
 <mat-list>
   <a mat-list-item

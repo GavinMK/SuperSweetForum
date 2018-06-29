@@ -16,6 +16,7 @@ import { UsersDashboardComponent } from './users/users-dashboard/users-dashboard
 
 import {ThreadsComponent} from './threads/threads.component';
 import {TopicPageComponent} from './threads/topic-page/topic-page.component';
+
 import {ThreadDetailsComponent } from './threads/thread-details/thread-details.component';
 import {ThreadDetailsPresentationComponent } from './threads/thread-details-presentation/thread-details-presentation.component';
 
@@ -27,6 +28,12 @@ import { RecentThreadsComponent } from './recent-threads/recent-threads.componen
 
 import {FilterTimeOptionService} from './shared/filter-time-option/filter-time-option.service';
 
+import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { UsernameValidatorDirective } from './threads/username-validator.directive';
+import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,14 +44,21 @@ import {FilterTimeOptionService} from './shared/filter-time-option/filter-time-o
     TopicPageComponent,
     ThreadDetailsComponent,
     ThreadDetailsPresentationComponent,
-    RecentThreadsComponent
+    RecentThreadsComponent,
+    TopicPageComponent,
+    ThreadCreatorComponent,
+    UsernameValidatorDirective,
+    ReplyCreatorComponent
   ],
   imports: [
     MatModule,
     BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
+    MatModule,
     FlexLayoutModule
   ],
   providers: [
