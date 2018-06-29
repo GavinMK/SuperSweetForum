@@ -4,5 +4,12 @@
       "id": 0,
       "name": "Gavin"
     }
+  ],
+  "threads": [
+    {
+      "id": 0,
+      "title": "Gavin's Cool Post",
+      "body": "This is the first post on this super sweet forum!"
+    }
   ]
 }
