@@ -1,5 +1,6 @@
 <div class="replyCreator">
   <form [formGroup]="form" (ngSubmit)="save(form.value)" novalidate>
+    <div fxLayout="Column">
     <mat-card>
     <mat-form-field fxFlex [color]="form.get('body').errors ? 'warn' : 'primary'">
       <input matInput formControlName="body" type="text" placeholder="Enter your reply here!">
@@ -21,9 +22,11 @@
       </mat-form-field>
       <mat-card-actions>
         <button mat-button [disabled]="!form.valid" type="submit">
-          (☞ﾟ∀ﾟ)☞ Post Thread
+          (☞ﾟ∀ﾟ)☞ Post Reply
         </button>
-        <a mat-button routerLink="/threads" title="Cancel Thread">¯\_(ツ)_/¯ Nevermind</a>
+        <a mat-button [routerLink]="['../']">¯\_(ツ)_/¯ Nevermind</a>
+        <!--<button mat-button (click)="goBackToParent()">¯\_(ツ)_/¯ Nevermind</button>-->
       </mat-card-actions>
+    </div>
   </form>
 </div>

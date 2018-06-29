@@ -23,10 +23,9 @@ export const APP_ROUTES: Routes = [
   { path: '', redirectTo: 'threads', pathMatch: 'full'},
   { path: 'threads', component: ThreadsComponent, children: [
       { path: '', component: TopicPageComponent },
-      { path: 'reply', component: ReplyCreatorComponent},
       { path: 'new', component: ThreadCreatorComponent },
-
-      { path: ':id', component: ThreadDetailsComponent, resolve: { thread: ThreadsResolver } },
+      { path: ':id', component: ThreadDetailsComponent, resolve: { thread: ThreadsResolver }},
+      { path: ':id/reply', component: ReplyCreatorComponent, resolve: { thread: ThreadsResolver} }
     ] },
   { path: '**', redirectTo: '/' }
 ];
