@@ -94,26 +94,20 @@
       "id": 0,
       "title": "Gavin's Cool Post",
       "body": "This is the first post on this super sweet forum!",
+      "poster": "Gavin",
       "replies": [
         {
           "id": "0:0",
           "body": "Hey Gavin, it's Gavin. Cool Forum"
+        },
+        {
+          "body": "Let's see if this post works now, if it did, then it's id should be 0:1 ",
+          "poster": "",
+          "id": "0:1"
         }
       ]
     },
     {
-
-      "id": 1,
-      "title": "Super Cool Thread number 1!",
-      "body": "This is the first post on this super sweet forum!",
-      "replies": [
-        {
-          "id": "0:0",
-          "body": "Hey Gavin, it's Gavin. Cool Forum"
-        }
-      ]},
-      {
-
       "title": "Super Cool Thread number 2!",
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
       "id": 1
@@ -128,7 +122,6 @@
       "body": "I spent too long trying to figure this out! :C but its okay now since the editor is now reachable by the rest of the app",
       "poster": "",
       "id": 3
-
     }
   ]
 }
