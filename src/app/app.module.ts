@@ -26,15 +26,23 @@ import { ThreadsService } from './threads/threads.service';
 import {UsersResolver} from './users/users.resolver';
 import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
 
-import {FilterTimeOptionService} from './shared/filter-time-option/filter-time-option.service';
-
 import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UsernameValidatorDirective } from './threads/username-validator.directive';
 import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
+
+import { LoginDialogComponent } from './login/login-dialog.component';
+
+import { StorageServiceModule } from 'angular-webstorage-service';
+import {LocalStorageService} from './shared/services/local-storage.service';
+
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
 
+import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
+import { AppToolbarContainerComponent } from './app-toolbar-container/app-toolbar-container.component';
+
+import {EventBusService} from './shared/services/event-bus.service';
 
 @NgModule({
   declarations: [
@@ -52,8 +60,11 @@ import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confir
     UsernameValidatorDirective,
     ReplyCreatorComponent,
     PostCreatorConfirmDialogComponent,
+    LoginDialogComponent,
+    AppToolbarContainerComponent
   ],
   entryComponents: [
+    LoginDialogComponent,
     PostCreatorConfirmDialogComponent,
   ],
   imports: [
@@ -65,15 +76,18 @@ import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confir
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
     MatModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    StorageServiceModule
   ],
   providers: [
     UserService,
-    FilterTimeOptionService,
     ThreadsService,
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
     UsersResolver,
+    LocalStorageService,
+    UserLoggedResolver,
+    EventBusService,
     PostCreatorDeactivateGuard
   ],
   bootstrap: [AppComponent]
