@@ -25,7 +25,7 @@ export class ThreadDetailsComponent implements OnInit {
     this.route.data.pipe(
       map(data => data.thread))
       .subscribe(thread => { this.thread = thread;
-      console.log(this.thread)});
+    });
   }
 
 }

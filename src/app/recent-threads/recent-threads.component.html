@@ -1,0 +1,19 @@
+<mat-card>
+    <button mat-button (click)="orderStateToogle$.next()">
+        Order
+        <mat-icon color="accent" *ngIf="orderState < 0">keyboard_arrow_up</mat-icon>
+        <mat-icon color="accent" *ngIf="orderState > 0">keyboard_arrow_down</mat-icon>
+    </button>
+</mat-card>
+<mat-list *ngFor="let thread of recentThreads">
+    <a mat-list-item
+        [routerLink]="['/threads', thread.id]"
+        title="Thread {{ thread.title }}">
+       <h3 mat-line>{{ thread.title }}</h3>
+    </a>
+</mat-list>
+<mat-card *ngIf="recentThreads.length === 0">
+    <mat-card-content>
+        No recent posts!
+    </mat-card-content>
+</mat-card>

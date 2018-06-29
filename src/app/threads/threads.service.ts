@@ -2,7 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {API_PATH} from '../app.tokens';
 import {Thread} from '../models/thread';
-import {debounceTime, distinct, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
+import {debounceTime, tap, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
 @Injectable()
@@ -32,6 +32,20 @@ export class ThreadsService {
 
   search(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{
     return terms$.pipe(debounceTime(debounce), distinctUntilChanged(), switchMap(terms => this.rawSearch(terms)));
+  }
+
+  getAllThreadsByOrder(order: number) {
+    return this.getThreads().pipe(
+      map(threads => {
+        const sortedThreads = threads.sort((firstThread, secondThread) => {
+          if (firstThread.id === secondThread.id) {
+            return 0;
+          }
+          return firstThread.id < secondThread.id ? 1 : -1;
+        });
+        return order > 0 ? sortedThreads.reverse() : sortedThreads;
+      })
+    )
   }
 
 

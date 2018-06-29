@@ -4,7 +4,7 @@
       "id": 0,
       "name": "Gavin",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test0@email.com"
       }
     },
@@ -12,7 +12,7 @@
       "id": 1,
       "name": "User2",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test1@email.com"
       }
     },
@@ -20,7 +20,7 @@
       "id": 2,
       "name": "User3",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test2@email.com"
       }
     },
@@ -28,8 +28,64 @@
       "id": 3,
       "name": "User4",
       "totalPosts": 120,
-      "userBio": {
+      "bio": {
         "email": "test3@email.com"
+      }
+    },
+    {
+      "id": 4,
+      "name": "User5",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
+      }
+    },
+    {
+      "id": 5,
+      "name": "User6",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
+      }
+    },
+    {
+      "id": 6,
+      "name": "User7",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
+      }
+    },
+    {
+      "id": 7,
+      "name": "User8",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
+      }
+    },
+    {
+      "id": 8,
+      "name": "User9",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
+      }
+    },
+    {
+      "id": 9,
+      "name": "User10",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
+      }
+    },
+    {
+      "id": 10,
+      "name": "User11",
+      "totalPosts": 120,
+      "bio": {
+        "email": "test1@email.com"
       }
     }
   ],
@@ -46,6 +102,18 @@
       ]
     },
     {
+
+      "id": 1,
+      "title": "Super Cool Thread number 1!",
+      "body": "This is the first post on this super sweet forum!",
+      "replies": [
+        {
+          "id": "0:0",
+          "body": "Hey Gavin, it's Gavin. Cool Forum"
+        }
+      ]},
+      {
+
       "title": "Super Cool Thread number 2!",
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
       "id": 1
@@ -60,6 +128,7 @@
       "body": "I spent too long trying to figure this out! :C but its okay now since the editor is now reachable by the rest of the app",
       "poster": "",
       "id": 3
+
     }
   ]
 }
