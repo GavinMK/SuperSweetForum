@@ -12,21 +12,36 @@ import {ReplyCreatorComponent} from './threads/reply-creator/reply-creator.compo
 import {UsersResolver} from './users/users.resolver';
 import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
 
+import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
+
+import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-container.component';
+
 export const APP_ROUTES: Routes = [
-  { path: 'recent-threads', component: RecentThreadsComponent },
-  { path: 'users', component: UsersDashboardComponent, children: [
-    { path: '', redirectTo: '0', pathMatch: 'full'},
-    { path: ':id', component: UserDetailComponent, resolve: {
-      user: UsersResolver
-    }},
-  ]},
-  { path: '', redirectTo: 'threads', pathMatch: 'full'},
-  { path: 'threads', component: ThreadsComponent, children: [
-      { path: '', component: TopicPageComponent },
-      { path: 'new', component: ThreadCreatorComponent },
-      { path: ':id', component: ThreadDetailsComponent, resolve: { thread: ThreadsResolver }},
-      { path: ':id/reply', component: ReplyCreatorComponent, resolve: { thread: ThreadsResolver} }
-    ] },
-  { path: '**', redirectTo: '/' }
+  {
+    path: '', component: AppToolbarContainerComponent, resolve: {
+      user: UserLoggedResolver
+    }, children: [
+      { 
+        path: 'recent-threads', component: RecentThreadsComponent
+      },
+      { 
+        path: 'users', component: UsersDashboardComponent, children: [
+          { 
+            path: '', redirectTo: '0', pathMatch: 'full'},
+          { 
+            path: ':id', component: UserDetailComponent, resolve: {
+              user: UsersResolver
+          }
+        },
+      ]},
+      { path: '', redirectTo: 'threads', pathMatch: 'full'},
+      { path: 'threads', component: ThreadsComponent, children: [
+          { path: '', component: TopicPageComponent },
+          { path: 'new', component: ThreadCreatorComponent },
+          { path: ':id', component: ThreadDetailsComponent, resolve: { thread: ThreadsResolver }},
+          { path: ':id/reply', component: ReplyCreatorComponent, resolve: { thread: ThreadsResolver} }
+        ] },
+      { path: '**', redirectTo: '/' }
+  ]}
 ];
 

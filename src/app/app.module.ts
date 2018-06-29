@@ -30,7 +30,15 @@ import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UsernameValidatorDirective } from './threads/username-validator.directive';
 import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
+import { LoginDialogComponent } from './login/login-dialog.component';
 
+import { StorageServiceModule } from 'angular-webstorage-service';
+import {LocalStorageService} from './shared/services/local-storage.service';
+
+import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
+import { AppToolbarContainerComponent } from './app-toolbar-container/app-toolbar-container.component';
+
+import {EventBusService} from './shared/services/event-bus.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +54,9 @@ import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.com
     TopicPageComponent,
     ThreadCreatorComponent,
     UsernameValidatorDirective,
-    ReplyCreatorComponent
+    ReplyCreatorComponent,
+    LoginDialogComponent,
+    AppToolbarContainerComponent
   ],
   imports: [
     MatModule,
@@ -57,14 +67,21 @@ import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.com
     ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
     MatModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    StorageServiceModule
   ],
   providers: [
     UserService,
     ThreadsService,
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
-    UsersResolver
+    UsersResolver,
+    LocalStorageService,
+    UserLoggedResolver,
+    EventBusService
+  ],
+  entryComponents: [
+    LoginDialogComponent
   ],
   bootstrap: [AppComponent]
 })

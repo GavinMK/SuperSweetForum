@@ -1,0 +1,25 @@
+<mat-toolbar color="accent">
+    <div fxLayout fxLayoutAlign="space-between center" fxFlex>
+      <a routerLink="/" class="mainPageLink">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Super Sweet Forum! ✧ﾟ･: *ヽ(◕ヮ◕ヽ)</a>
+    </div>
+    <div fxLayout>
+        <button color="primary" mat-button *ngIf="!loggedUser" (click)="showLoginDialog()">
+            LOGIN
+        </button>
+        <button color="warn" mat-button *ngIf="loggedUser" (click)="logout()">
+            LOGOUT - {{loggedUser?.name}}
+        </button>
+    </div>
+</mat-toolbar>
+<div>
+    <a mat-button color="orange" [routerLink]="['/recent-threads']">
+        RECENT THREADS
+    </a>
+    <a mat-button [routerLink]="['/users']">
+        USERS
+    </a>
+    <a mat-button [routerLink]="['/threads']">
+        THREADS
+    </a>
+</div>
+<router-outlet></router-outlet>

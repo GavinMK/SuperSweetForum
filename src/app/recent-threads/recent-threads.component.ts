@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Thread} from '../models/thread';
 import {ThreadsService} from '../threads/threads.service';
-import { map, switchMap, startWith, scan, tap } from 'rxjs/operators';
+import { switchMap, startWith, scan, tap } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -10,6 +10,8 @@ import { Subject } from 'rxjs';
   styleUrls: ['./recent-threads.component.css']
 })
 export class RecentThreadsComponent implements OnInit {
+
+  INITIAL_ORDER_STATE: number = 1;
 
   orderStateToogle$ = new Subject<number>()
 
@@ -21,8 +23,8 @@ export class RecentThreadsComponent implements OnInit {
   ngOnInit() {
 
     this.orderStateToogle$.pipe(
-      startWith(1),
-      scan(lastValue => lastValue === 1 ? -1 : 1),
+      startWith(this.INITIAL_ORDER_STATE),
+      scan(lastValue => lastValue === this.INITIAL_ORDER_STATE ? -this.INITIAL_ORDER_STATE : this.INITIAL_ORDER_STATE),
       tap((orderState) => {
         this.orderState = orderState;
       }),
