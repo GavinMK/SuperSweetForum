@@ -5,22 +5,23 @@ import { AppComponent } from './app.component';
 import {UserService} from './users/user.service';
 import {API_PATH} from './app.tokens';
 import {HttpClientModule} from '@angular/common/http';
-import {UsersComponent} from './users/users.component';
-import {RouterModule} from '@angular/router';
-import {MaterialModule} from './materials.module';
-
+import {MatModule} from './mat.module';
 import {APP_ROUTES} from './app.routes';
+import {RouterModule} from '@angular/router';
+import {UsersComponent} from './users/users.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    MaterialModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    MatModule
   ],
   providers: [
     UserService,

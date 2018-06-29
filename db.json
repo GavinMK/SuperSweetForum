@@ -3,22 +3,41 @@
     {
       "id": 0,
       "name": "Gavin",
-      "totalPosts": 120
+      "totalPosts": 120,
+      "userBio": {
+        "email": "test0@email.com"
+      }
     },
     {
       "id": 1,
       "name": "User2",
-      "totalPosts": 120
+      "totalPosts": 120,
+      "userBio": {
+        "email": "test1@email.com"
+      }
     },
     {
       "id": 2,
       "name": "User3",
-      "totalPosts": 120
+      "totalPosts": 120,
+      "userBio": {
+        "email": "test2@email.com"
+      }
     },
     {
       "id": 3,
       "name": "User4",
-      "totalPosts": 120
+      "totalPosts": 120,
+      "userBio": {
+        "email": "test3@email.com"
+      }
+    }
+  ],
+  "threads": [
+    {
+      "id": 0,
+      "title": "Gavin's Cool Post",
+      "body": "This is the first post on this super sweet forum!"
     }
   ]
 }
