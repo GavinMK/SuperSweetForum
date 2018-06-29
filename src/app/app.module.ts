@@ -38,6 +38,7 @@ import {LocalStorageService} from './shared/services/local-storage.service';
 
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
+import { LoginComponent } from './login/login.component';
 
 import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
 import { AppToolbarContainerComponent } from './app-toolbar-container/app-toolbar-container.component';
@@ -60,8 +61,7 @@ import {EventBusService} from './shared/services/event-bus.service';
     UsernameValidatorDirective,
     ReplyCreatorComponent,
     PostCreatorConfirmDialogComponent,
-    LoginDialogComponent,
-    AppToolbarContainerComponent
+    LoginComponent,
   ],
   entryComponents: [
     LoginDialogComponent,

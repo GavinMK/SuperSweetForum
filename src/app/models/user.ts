@@ -2,7 +2,8 @@ import {UserBio} from './user-bio';
 
 export interface User {
   id: number | string;
-  name?: string;
+  name: string;
   totalPosts: number;
-  bio: UserBio;
+  image?: string,
+  bio?: UserBio;
 }
