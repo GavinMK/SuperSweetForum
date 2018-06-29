@@ -10,7 +10,7 @@ import {concat, Observable, Subject} from 'rxjs';
 })
 export class ThreadsComponent implements OnInit {
 
-  thread$: Observable<Array<Thread>>;
+  thread$: Observable<Thread[]>;
   term$: Subject<string> = new Subject<string>();
 
   constructor(private threadService: ThreadsService) { }

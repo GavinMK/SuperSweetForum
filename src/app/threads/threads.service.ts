@@ -2,30 +2,31 @@ import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {API_PATH} from '../app.tokens';
 import {Thread} from '../models/thread';
-import {debounceTime, distinct, distinctUntilChanged, switchMap} from 'rxjs/operators';
+import {debounceTime, distinct, distinctUntilChanged, map, switchMap} from 'rxjs/operators';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class ThreadsService {
 
   constructor(private http: HttpClient, @Inject(API_PATH) private apiPath) {}
 
-  getThread(id: string){
-    return this.http.get(`${this.apiPath}/threads/${id}`);
+  getThread(id: string): Observable<Thread>{
+    return this.http.get<Thread>(`${this.apiPath}/threads/${id}`);
   }
 
-  getThreads(){
-    return this.http.get(`${this.apiPath}/threads`);
+  getThreads(): Observable<Thread[]>{
+    return this.http.get<Thread[]>(`${this.apiPath}/threads`);
   }
 
-  updateThread(thread: Thread){
-    return this.http.put(`${this.apiPath}/threads/${thread.id}`, thread);
+  updateThread(thread: Thread): Observable<Thread>{
+    return this.http.put<Thread>(`${this.apiPath}/threads/${thread.id}`, thread);
   }
 
-  rawSearch(term: string){
-    return this.http.get(`${this.apiPath}/threadsq?=${term}`)
+  rawSearch(term: string): Observable<Thread[]>{
+    return this.http.get<Thread[]>(`${this.apiPath}/threadsq?=${term}`)
   }
 
-  search(terms$, debounce = 200){
+  search(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{
     return terms$.pipe(debounceTime(debounce), distinctUntilChanged(), switchMap(terms => this.rawSearch(terms)));
   }
 
