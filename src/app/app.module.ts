@@ -32,6 +32,8 @@ import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UsernameValidatorDirective } from './threads/username-validator.directive';
 import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
+import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
+import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
 
 
 @NgModule({
@@ -48,7 +50,11 @@ import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.com
     TopicPageComponent,
     ThreadCreatorComponent,
     UsernameValidatorDirective,
-    ReplyCreatorComponent
+    ReplyCreatorComponent,
+    PostCreatorConfirmDialogComponent,
+  ],
+  entryComponents: [
+    PostCreatorConfirmDialogComponent,
   ],
   imports: [
     MatModule,
@@ -67,7 +73,8 @@ import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.com
     ThreadsService,
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
-    UsersResolver
+    UsersResolver,
+    PostCreatorDeactivateGuard
   ],
   bootstrap: [AppComponent]
 })
