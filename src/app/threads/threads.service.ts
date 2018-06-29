@@ -22,6 +22,10 @@ export class ThreadsService {
     return this.http.put<Thread>(`${this.apiPath}/threads/${thread.id}`, thread);
   }
 
+  addThread(thread: Thread): Observable<Thread>{
+    return this.http.post<Thread>(`${this.apiPath}/threads`, thread);
+  }
+
   rawSearch(term: string): Observable<Thread[]>{
     return this.http.get<Thread[]>(`${this.apiPath}/threads?q=${term}`)
   }

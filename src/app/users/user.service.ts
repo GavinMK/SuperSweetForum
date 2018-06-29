@@ -18,4 +18,9 @@ export class UserService {
     return this.http.get<Array<User>>(`${this.apiPath}/users`);
   }
 
+  getUserByName(user: string): Observable<any>{
+    return this.http.get<any>(`${this.apiPath}/users?name=${user}`);
+
+  }
+
 }

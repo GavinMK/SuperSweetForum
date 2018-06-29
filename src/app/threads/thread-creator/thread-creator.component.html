@@ -1,0 +1,41 @@
+<div class="thread-creator">
+  <form [formGroup]="form" (ngSubmit)="save(form.value)" novalidate>
+    <div fxLayout="column">
+  <mat-form-field fxFlex [color]="form.get('title').errors ? 'warn' : 'primary'">
+    <input matInput formControlName="title" type="text" placeholder="Title your thread">
+    <mat-hint align="end" *ngIf="!form.get('title').valid && !form.get('title').pristine">
+      ｡゜(｀Д´)゜｡  A title must be provided!
+    </mat-hint>
+  </mat-form-field>
+      <mat-card>
+  <mat-form-field fxFlex [color]="form.get('body').errors ? 'warn' : 'primary'">
+    <input matInput formControlName="body" type="text" placeholder="Type your post here!">
+    <mat-hint align="end" *ngIf="!form.get('body').valid && !form.get('body').pristine">
+      <ng-container *ngIf="form.get('body').hasError('maxlength')">
+        ｡゜(｀Д´)゜｡ Your post is way too long buddy!
+      </ng-container>
+      <ng-container *ngIf="form.get('body').hasError('minlength')">
+        ｡゜(｀Д´)゜｡ Your post needs to be longer! 100 characters at least!
+      </ng-container>
+    </mat-hint>
+  </mat-form-field>
+      </mat-card>
+      <mat-checkbox #box checked="true">Post Anonymously?</mat-checkbox>
+      <mat-form-field *ngIf="!box.checked" fxFlex [color]="form.get('poster').errors ? 'warn' : 'primary' ">
+        <input matInput formControlName="poster" type="text" placeholder="Username">
+        <mat-hint align="end" *ngIf="!form.get('poster').valid && !form.get('poster').pristine">
+          <ng-container *ngIf="form.get('poster').hasError('minlength')">
+            ｡゜(｀Д´)゜｡ That username is too small!
+          </ng-container>
+        </mat-hint>
+      </mat-form-field>
+  <mat-card-actions>
+    <button mat-button [disabled]="!form.valid" type="submit">
+      (☞ﾟ∀ﾟ)☞ Post Thread
+    </button>
+    <a mat-button routerLink="/threads" title="Cancel Thread">¯\_(ツ)_/¯ Nevermind</a>
+  </mat-card-actions>
+    </div>
+  </form>
+
+</div>
