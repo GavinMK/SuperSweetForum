@@ -19,7 +19,6 @@ export class TopicPageComponent implements OnInit {
     const initial$ = this.threadService.getThreads();
     const search$ = this.threadService.search(this.term$);
     this.thread$ = concat(initial$, search$);
-
   }
 
   trackById(index, thread){
