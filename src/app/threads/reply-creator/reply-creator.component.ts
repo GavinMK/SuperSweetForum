@@ -41,10 +41,7 @@ export class ReplyCreatorComponent implements OnInit {
   }
 
   save(reply: Reply){
-    let posts: number;
     this.thread.replies.push(reply);
-    this.threadService.getPosts().subscribe(data => posts = data);
-    this.thread.postnum = posts;
     this.threadService.updateThread(this.thread)
       .subscribe(() => {
         this.saved = true;

@@ -89,57 +89,46 @@
       }
     }
   ],
-  "totalPosts": {
-    "num": 8
-  },
   "threads": [
     {
       "id": 0,
-      "postnum": 0,
       "title": "Gavin's Cool Post",
       "body": "This is the first post on this super sweet forum!",
       "poster": "Gavin",
       "replies": [
         {
           "id": "0:0",
-          "postnum": 1,
           "body": "Hey Gavin, it's Gavin. Cool Forum"
         },
         {
           "body": "Let's see if this post works now, if it did, then it's id should be 0:1 ",
           "poster": "",
-          "id": "0:1",
-          "postnum": 6
+          "id": "0:1"
         },
         {
           "body": "If you're seeing this post, then that means my deactivation guard is working correctly!",
           "poster": "Not Gavin",
-          "id": "0:2",
-          "postnum": 7
+          "id": "0:2"
         }
       ]
     },
     {
       "title": "Super Cool Thread number 2!",
-      "postnum": 2,
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
       "id": 1
     },
     {
-      "posstnum": 3,
       "title": "Log number three",
       "body": "This is an example post again. It needs to have at least 100 characters or it will not let me press the post butotn. Now that it does, I can.",
       "id": 2
     },
     {
-      "postnum": 4,
       "title": "Gavin New Post",
       "body": "I spent too long trying to figure this out! :C but its okay now since the editor is now reachable by the rest of the app",
       "poster": "",
       "id": 3
     },
     {
-      "postnum": 5,
       "title": "Random",
       "body": "I wonder if you're tired of seeing all of these random posts that I'm testing out the functionality of my app with",
       "poster": "",

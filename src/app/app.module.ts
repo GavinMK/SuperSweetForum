@@ -34,6 +34,7 @@ import { UsernameValidatorDirective } from './threads/username-validator.directi
 import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -52,6 +53,7 @@ import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confir
     UsernameValidatorDirective,
     ReplyCreatorComponent,
     PostCreatorConfirmDialogComponent,
+    LoginComponent,
   ],
   entryComponents: [
     PostCreatorConfirmDialogComponent,
