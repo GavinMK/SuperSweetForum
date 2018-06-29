@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {MatDialogRef} from '@angular/material';
 import {UserService} from '../users/user.service';
 import {User} from '../models/user';
-import { EventBusService } from '../shared/services/event-bus.service';
 
 @Component({
   selector: 'app-login-dialog',
@@ -13,18 +12,11 @@ export class LoginDialogComponent {
 
   user: User;
 
-  constructor(public dialogRef: MatDialogRef<LoginDialogComponent>, 
-              private userService: UserService, 
-              private eventBusService: EventBusService) {}
+  constructor(public dialogRef: MatDialogRef<LoginDialogComponent>,
+              private userService: UserService){}
 
   ngOnInit() {
     this.initializeUser();
-  }
-
-  login(user: any) {
-    this.userService.login(user.name, user.password).subscribe(userLogged => {
-      this.dialogRef.close();
-    });
   }
 
   private initializeUser () {

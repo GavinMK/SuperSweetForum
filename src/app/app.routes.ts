@@ -13,23 +13,20 @@ import {UsersResolver} from './users/users.resolver';
 import { RecentThreadsComponent } from './recent-threads/recent-threads.component';
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 
-import {UserLoggedResolver} from './shared/resolvers/user-logged.resolver';
-
 import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-container.component';
 
 export const APP_ROUTES: Routes = [
   {
     path: '', component: AppToolbarContainerComponent, resolve: {
-      user: UserLoggedResolver
     }, children: [
-      { 
+      {
         path: 'recent-threads', component: RecentThreadsComponent
       },
-      { 
+      {
         path: 'users', component: UsersDashboardComponent, children: [
-          { 
+          {
             path: '', redirectTo: '0', pathMatch: 'full'},
-          { 
+          {
             path: ':id', component: UserDetailComponent, resolve: {
               user: UsersResolver
           }
