@@ -1,0 +1,29 @@
+<div class="replyCreator">
+  <form [formGroup]="form" (ngSubmit)="save(form.value)" novalidate>
+    <mat-card>
+    <mat-form-field fxFlex [color]="form.get('body').errors ? 'warn' : 'primary'">
+      <input matInput formControlName="body" type="text" placeholder="Enter your reply here!">
+      <mat-hint align="end" *ngIf="!form.get('body').valid && !form.get('body').pristine">
+        <ng-container *ngIf="form.get('body').hasError('minlength')">
+          ｡゜(｀Д´)゜｡ That reply is too small!
+        </ng-container>
+      </mat-hint>
+    </mat-form-field>
+  </mat-card>
+      <mat-checkbox #box checked="true">Post Anonymously?</mat-checkbox>
+      <mat-form-field *ngIf="!box.checked" fxFlex [color]="form.get('poster').errors ? 'warn' : 'primary' ">
+        <input matInput formControlName="poster" type="text" placeholder="Username">
+        <mat-hint align="end" *ngIf="!form.get('poster').valid && !form.get('poster').pristine">
+          <ng-container *ngIf="form.get('poster').hasError('minlength')">
+            ｡゜(｀Д´)゜｡ That username is too small!
+          </ng-container>
+        </mat-hint>
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-button [disabled]="!form.valid" type="submit">
+          (☞ﾟ∀ﾟ)☞ Post Thread
+        </button>
+        <a mat-button routerLink="/threads" title="Cancel Thread">¯\_(ツ)_/¯ Nevermind</a>
+      </mat-card-actions>
+  </form>
+</div>

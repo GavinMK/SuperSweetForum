@@ -17,6 +17,11 @@ import { ThreadDetailsComponent } from './threads/thread-details/thread-details.
 import { ThreadDetailsPresentationComponent } from './threads/thread-details-presentation/thread-details-presentation.component';
 import {ThreadsResolver} from './threads/threads.resolver';
 import {TopicPageComponent} from './threads/topic-page/topic-page.component';
+import { ThreadCreatorComponent } from './threads/thread-creator/thread-creator.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FlexLayoutModule} from '@angular/flex-layout';
+import { UsernameValidatorDirective } from './threads/username-validator.directive';
+import { ReplyCreatorComponent } from './threads/reply-creator/reply-creator.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +31,20 @@ import {TopicPageComponent} from './threads/topic-page/topic-page.component';
     ThreadsComponent,
     ThreadDetailsComponent,
     ThreadDetailsPresentationComponent,
-    TopicPageComponent
+    TopicPageComponent,
+    ThreadCreatorComponent,
+    UsernameValidatorDirective,
+    ReplyCreatorComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
     MatModule,
+    FlexLayoutModule
   ],
   providers: [
     UserService,
