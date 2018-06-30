@@ -12,7 +12,7 @@
       {{ thread.body }}
     </mat-card-content>
   </mat-card>
-  <mat-card class="reply" *ngFor="let reply of replies$ | async">
+  <mat-card class="reply" *ngFor="let reply of replies">
     <a *ngIf="reply.replies" color="accent" class="custom-button" mat-button [routerLink]="['/threads', reply.id]">View </a>
     <mat-card-title-group>
       <mat-card-subtitle class="replyPost">Posted by: {{ reply.poster ? reply.poster : "Anonymous"}}<br>

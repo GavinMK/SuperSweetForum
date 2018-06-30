@@ -11,7 +11,7 @@ export class ThreadDetailsPresentationComponent implements OnInit {
 
   @Input() thread: Thread;
 
-  @Input() replies$: Observable<Thread[]>;
+  @Input() replies: Observable<Thread[]>;
 
   @Output() reply2: EventEmitter<number> = new EventEmitter<number>();
 

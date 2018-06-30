@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Thread} from '../../models/thread';
 import {ThreadsService} from '../threads.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {map, switchMap} from 'rxjs/operators';
+import {map, switchMap, tap} from 'rxjs/operators';
 import {merge, Observable} from 'rxjs';
 
 
@@ -14,7 +14,7 @@ import {merge, Observable} from 'rxjs';
 export class ThreadDetailsComponent implements OnInit {
 
   thread: Thread;
-  replies$: Observable<Thread[]>;
+  replies: Thread[];
 
   constructor(
     private threadService: ThreadsService,
@@ -28,14 +28,10 @@ export class ThreadDetailsComponent implements OnInit {
       map(data => data.thread))
       .subscribe(thread => { this.thread = thread;
     });
-    console.log(this.thread.id);
-    let path: string = `?`;
-    this.thread.replies.forEach( reply => path+=(`&id=${reply}`));
-    this.replies$ = this.threadService.getFilteredThreads(path);
-  }
-
-  replyBuilder(): void{
-
+    this.route.data.pipe(
+      map(data => data.replies))
+      .subscribe(reply => { this.replies = reply;
+      });
   }
 
   visitReply(event: number): void{
