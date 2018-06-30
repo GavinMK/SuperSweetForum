@@ -33,6 +33,7 @@ export class ThreadCreatorComponent implements OnInit {
   }
 
   save(thread: Thread){
+    thread.isMainThread = true;
     this.threadService.addThread(thread).subscribe(() => {
       this.saved = true;
       this.router.navigate(["/threads"])

@@ -28,8 +28,8 @@ export class ThreadDetailsComponent implements OnInit {
     });
   }
 
-  makeReply(): void{
-    this.router.navigate(['reply'], { relativeTo: this.route });
+  makeReply(event: number): void{
+    this.router.navigate([`../${event}/reply`], { relativeTo: this.route });
   }
 
 }
