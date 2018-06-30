@@ -12,12 +12,16 @@ export class ThreadsService {
 
   constructor(private http: HttpClient, @Inject(API_PATH) private apiPath) {}
 
-  getThread(id: string): Observable<Thread>{
+  getThread(id: number | string): Observable<Thread>{
     return this.http.get<Thread>(`${this.apiPath}/threads/${id}`);
   }
 
   getThreads(): Observable<Thread[]>{
     return this.http.get<Thread[]>(`${this.apiPath}/threads`);
+  }
+
+  getFilteredThreads(filter: string): Observable<Thread[]>{
+    return this.http.get<Thread[]>(`${this.apiPath}/threads${filter}`)
   }
 
   getMainThreadsbyId(): Observable<Thread[]>{

@@ -12,9 +12,9 @@
     {{ thread.body }}
   </mat-card-content>
 </mat-card>
-<mat-card class="reply" *ngFor="let reply of thread.replies">
+<mat-card class="reply" *ngFor="let reply of replies$ | async">
+  <a *ngIf="reply.replies" mat-button (click)="visitReply.emit(reply.id)">View </a>
   <mat-card-title-group>
-    <a *ngIf="reply.replies" mat-button (click)="visitReply.emit(reply.id)">View </a>
     <mat-card-subtitle class="replyPost">Posted by: {{ reply.poster ? reply.poster : "Anonymous"}}<br>
       Replies: {{ reply.replies ? reply.replies.length : "0 (ಥ﹏ಥ)" }} </mat-card-subtitle>
   <button mat-button (click)="reply2.emit(reply.id)">Reply</button>
