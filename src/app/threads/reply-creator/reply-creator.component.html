@@ -3,7 +3,7 @@
     <div fxLayout="Column">
     <mat-card>
     <mat-form-field fxFlex [color]="form.get('body').errors ? 'warn' : 'primary'">
-      <input matInput formControlName="body" type="text" placeholder="Enter your reply here!">
+      <textarea matInput formControlName="body" type="text" placeholder="Enter your reply here!"></textarea>
       <mat-hint align="end" *ngIf="!form.get('body').valid && !form.get('body').pristine">
         <ng-container *ngIf="form.get('body').hasError('minlength')">
           ｡゜(｀Д´)゜｡ That reply is too small!

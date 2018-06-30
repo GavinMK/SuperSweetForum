@@ -3,7 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Reply, Thread} from '../../models/thread';
 import {ThreadsService} from '../threads.service';
-import {map} from 'rxjs/operators';
+import {map, switchMap} from 'rxjs/operators';
 import {waitForMap} from '@angular/router/src/utils/collection';
 
 @Component({
@@ -40,14 +40,22 @@ export class ReplyCreatorComponent implements OnInit {
     this.router.navigate(['../'], { relativeTo : this.route})
   }
 
-  save(reply: Reply){
-    this.thread.replies.push(reply);
-    this.threadService.updateThread(this.thread)
-      .subscribe(() => {
+  addReply(reply: Thread): Thread{
+    this.thread.replies ? this.thread.replies.push(reply) : this.thread.replies = [reply];
+    this.thread.mostRecent = reply.id;
+    return this.thread
+
+}
+
+  save(reply: Thread){
+    reply.isMainThread = false;
+    this.threadService.addThread(reply).pipe(
+      switchMap( reply => this.threadService.updateThread(this.addReply(reply)))).subscribe(
+      () => {
         this.saved = true;
         this.router.navigate(['../'], {relativeTo: this.route})
-      });
-
+      }
+    )
 
   }
 

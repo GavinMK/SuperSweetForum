@@ -20,6 +20,14 @@ export class ThreadsService {
     return this.http.get<Thread[]>(`${this.apiPath}/threads`);
   }
 
+  getMainThreadsbyId(): Observable<Thread[]>{
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?isMainThread=true&_sort=mostRecent&_order=desc`)
+  }
+
+  getMainThreads(): Observable<Thread[]>{
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?isMainThread=true`);
+  }
+
   updateThread(thread: Thread): Observable<Thread>{
     return this.http.put<Thread>(`${this.apiPath}/threads/${thread.id}`, thread);
   }
@@ -34,6 +42,14 @@ export class ThreadsService {
 
   search(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{
     return terms$.pipe(debounceTime(debounce), distinctUntilChanged(), switchMap(terms => this.rawSearch(terms)));
+  }
+
+  rawMain(term: string): Observable<Thread[]>{
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?q=${term}&isMainThread=true`)
+  }
+
+  searchMain(terms$: Observable<string>, deboune = 200): Observable<Thread[]>{
+    return terms$.pipe(debounceTime(deboune), distinctUntilChanged(), switchMap(terms => this.rawMain(terms)));
   }
 
   getAllThreadsByOrder(order: number) {

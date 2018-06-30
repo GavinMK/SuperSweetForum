@@ -1,16 +1,16 @@
 export interface Reply {
   id: string;
   body: string;
-  postnum: number;
   poster?: string;
 }
 
 export interface Thread {
-  id: number | string;
-  title: string;
-  postnum: number;
+  id: number;
+  title?: string;
   body: string;
-  replies?: Reply[];
+  isMainThread: boolean;
+  mostRecent: number;
+  replies?: Thread[];
   poster?: string;
 }
 
