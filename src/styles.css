@@ -16,4 +16,17 @@ body, html {
     width: 100%;
   }
 
+  .custom-button {
+    color: black !important;
+    font-weight: bold;
+  }
+
+  .custom-button:hover, .hover-overlay-yellow:hover, .mat-button:hover {
+    background:  #f6f1df !important;
+  }
+  
+  .mat-button.mat-primary .mat-button-focus-overlay {
+    background-color: transparent;
+  }
+
 
