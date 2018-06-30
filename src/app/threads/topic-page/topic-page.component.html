@@ -4,11 +4,13 @@
            (input)="term$.next($event.target.value)">
     <mat-placeholder class="searchHolder">You can search for a thread here!</mat-placeholder>
   </mat-form-field>
-  <button fxFlex mat-button routerLink="/threads/new">(☞ﾟヮﾟ)☞  Make a New Thread!  ☜(ﾟヮﾟ☜)</button>
+  <button mat-button class="custom-button" color="accent" routerLink="/threads/new">
+    (☞ﾟヮﾟ)☞ NEW THREAD  ☜(ﾟヮﾟ☜)
+  </button>
 </mat-toolbar>
 <mat-card class="threadItem" *ngFor="let thread of thread$ | async; trackBy: trackById">
-    <a class="linkButton" mat-button [routerLink]="['/threads', thread.id]">
-      <mat-card-title >{{ thread.title }}</mat-card-title>
+    <a color="accent" class="linkButton" mat-button [routerLink]="['/threads', thread.id]">
+      <mat-card-title>{{ thread.title }}</mat-card-title>
     </a>
   <mat-card-content class="threadInfo" align="end">
     Posted by: {{ thread.poster ? thread.poster : "Anonymous"}}<br>
