@@ -38,6 +38,8 @@ import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confir
 import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-container.component';
 import { UserThreadsComponent } from './user-threads/user-threads.component';
 
+import {ThreadsGuard} from './threads/threads-activate.guard.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +81,8 @@ import { UserThreadsComponent } from './user-threads/user-threads.component';
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
     UsersResolver,
-    PostCreatorDeactivateGuard
+    PostCreatorDeactivateGuard,
+    ThreadsGuard
   ],
   bootstrap: [AppComponent]
 })

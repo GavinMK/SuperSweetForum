@@ -1,5 +1,5 @@
 <mat-card>
-    <button mat-button (click)="orderStateToogle$.next()">
+    <button mat-button class="custom-button" color="accent" (click)="orderStateToogle$.next()">
         Order
         <mat-icon color="accent" *ngIf="orderState < 0">keyboard_arrow_up</mat-icon>
         <mat-icon color="accent" *ngIf="orderState > 0">keyboard_arrow_down</mat-icon>
