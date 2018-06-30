@@ -12,7 +12,8 @@
     <a color="accent" class="linkButton" mat-button [routerLink]="['/threads', thread.id]">
       <mat-card-title>{{ thread.title }}</mat-card-title>
     </a>
-    <div align="end">Posted by: {{ thread.poster ? thread.poster : "Anonymous"}}<br>
-      Replies: {{ thread.replies ? thread.replies.length : "0 (ಥ﹏ಥ)" }}
-    </div>
+  <mat-card-content class="threadInfo" align="end">
+    Posted by: {{ thread.poster ? thread.poster : "Anonymous"}}<br>
+    Replies: {{ thread.replies ? thread.replies.length : "0 (ಥ﹏ಥ)" }}
+  </mat-card-content>
 </mat-card>

@@ -45,7 +45,7 @@ export class ThreadsService {
   }
 
   rawSearchByPoster(poster: string, term: string): Observable<Thread[]>{
-    return this.http.get<Thread[]>(`${this.apiPath}/threads?poster=${poster}&q=${term}&isMainThread=true`)
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?poster=${poster}&q=${term}`)
   }
 
   search(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{

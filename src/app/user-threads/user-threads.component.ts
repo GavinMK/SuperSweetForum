@@ -17,8 +17,8 @@ export class UserThreadsComponent implements OnInit {
   thread$: Observable<Thread[]>;
   term$: Subject<string> = new Subject<string>();
 
-  constructor(private threadService: ThreadsService, 
-              private route: ActivatedRoute, 
+  constructor(private threadService: ThreadsService,
+              private route: ActivatedRoute,
               private userService: UserService) { }
 
   ngOnInit() {
@@ -32,9 +32,7 @@ export class UserThreadsComponent implements OnInit {
         startWith("")
       )))
     );
-
   }
-
   trackById(index, thread){
     return thread.id
   }

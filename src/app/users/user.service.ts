@@ -31,8 +31,8 @@ export class UserService {
     return this.http.get<Array<User>>(`${this.apiPath}/users?q=${name}`);
   }
 
-  getUserByName(name: string): Observable<User>{
-    return this.http.get<User>(`${this.apiPath}/users?name=${name}`);
+  getUserByName(name: string): Observable<any>{
+    return this.http.get<any>(`${this.apiPath}/users?name=${name}`);
   }
 
   getUsersByPost(): Observable<User[]>{
