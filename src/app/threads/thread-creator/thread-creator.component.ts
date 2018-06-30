@@ -5,6 +5,7 @@ import {Thread} from '../../models/thread';
 import {Router} from '@angular/router';
 import {checkAvailability} from '../username-validator.directive';
 import {UserService} from '../../users/user.service';
+import {User} from '../../models/user';
 
 @Component({
   selector: 'app-thread-creator',
@@ -31,6 +32,7 @@ export class ThreadCreatorComponent implements OnInit {
       poster: ['', Validators.minLength(2)]
     })
   }
+
 
   save(thread: Thread){
     thread.isMainThread = true;

@@ -4,6 +4,7 @@
       "id": 0,
       "name": "Gavin",
       "totalPosts": 120,
+      "recentPost": 1,
       "bio": {
         "email": "test0@email.com"
       }
@@ -153,8 +154,16 @@
       "title": "Super Cool Thread number 2!",
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
       "id": 4,
-      "mostRecent": 4,
-      "isMainThread": true
+      "mostRecent": 18,
+      "isMainThread": true,
+      "replies": [
+        {
+          "body": "Reasonable length fo text digsjdgskd",
+          "poster": "",
+          "isMainThread": false,
+          "id": 18
+        }
+      ]
     },
     {
       "title": "Log number three",
@@ -295,6 +304,12 @@
       "poster": "",
       "isMainThread": false,
       "id": 17
+    },
+    {
+      "body": "Reasonable length fo text digsjdgskd",
+      "poster": "",
+      "isMainThread": false,
+      "id": 18
     }
   ]
 }

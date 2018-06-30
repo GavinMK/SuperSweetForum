@@ -18,12 +18,20 @@ export class UserService {
     return this.http.get<Array<User>>(`${this.apiPath}/users`);
   }
 
+  addUser(user: User): Observable<User>{
+    return this.http.post<User>(`${this.apiPath}/users`, user);
+  }
+
   getFilteredUsersByName(name: string): Observable<Array<User>> {
     return this.http.get<Array<User>>(`${this.apiPath}/users?q=${name}`);
   }
 
   getUserByName(name: string): Observable<any>{
     return this.http.get<any>(`${this.apiPath}/users?name=${name}`);
+  }
+
+  getUsersByPost(): Observable<User[]>{
+    return this.http.get<User[]>(`${this.apiPath}/users?_sort=recentPost&_order=desc`)
   }
 
 }
