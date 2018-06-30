@@ -6,7 +6,7 @@
     </mat-form-field>
 </mat-toolbar>
 <mat-card class="threadItem"  *ngFor="let thread of thread$ | async; trackBy: trackById">
-      <a class="linkButton" mat-button [routerLink]="['/threads', thread.id]">
+      <a class="linkButton custom-button" color="accent" mat-button [routerLink]="['/threads', thread.id]">
         <mat-card-title [ngClass]="thread.isMainThread ? 'Main' : 'Reply'"class>{{ thread.title }}</mat-card-title>
       </a>
     <div style="display:inline-block; float:right; font-size:12px; "align="end">
