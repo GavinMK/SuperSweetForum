@@ -165,7 +165,18 @@
       "parentThreadId": 12,
       "poster": "",
       "isMainThread": false,
-      "id": 14
+      "id": 14,
+      "replies": [
+        {
+          "body": "Testing this reply button thing, ",
+          "poster": "",
+          "isMainThread": false,
+          "parentThreadId": 14,
+          "title": "Reply to: [Reply to: [New status thread]]",
+          "id": 51
+        }
+      ],
+      "mostRecent": 51
     },
     {
       "body": "I CANT BELIEVE IT ACTUALLY WORKED ON THE FIRST TIME",
@@ -206,6 +217,14 @@
       "parentThreadId": 12,
       "title": "Reply to: [New status thread]",
       "id": 50
+    },
+    {
+      "body": "Testing this reply button thing, ",
+      "poster": "",
+      "isMainThread": false,
+      "parentThreadId": 14,
+      "title": "Reply to: [Reply to: [New status thread]]",
+      "id": 51
     }
   ]
 }

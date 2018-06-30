@@ -28,6 +28,10 @@ export class ThreadDetailsComponent implements OnInit {
     });
   }
 
+  visitReply(event: number): void{
+    this.router.navigate(['/threads', event]);
+  }
+
   makeReply(event: number): void{
     this.router.navigate(['/threads', event, 'reply']);
   }

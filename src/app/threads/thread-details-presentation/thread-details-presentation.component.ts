@@ -12,6 +12,8 @@ export class ThreadDetailsPresentationComponent implements OnInit {
 
   @Output() reply2: EventEmitter<number> = new EventEmitter<number>();
 
+  @Output() visitReply: EventEmitter<number> = new EventEmitter<number>();
+
   constructor() { }
 
   ngOnInit() {
