@@ -13,7 +13,7 @@ export class UserDetailComponent implements OnInit {
 
   user: User;
 
-  constructor(private userService: UserService, 
+  constructor(private userService: UserService,
     private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -22,10 +22,6 @@ export class UserDetailComponent implements OnInit {
     ).subscribe(user => {
       this.user = user as User;
     })
-  }
-
-  showUserThreads() {
-    
   }
 
 }

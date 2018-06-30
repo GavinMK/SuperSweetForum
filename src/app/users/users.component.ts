@@ -18,7 +18,7 @@ export class UsersComponent implements OnInit{
     constructor(private userService: UserService, private route: ActivatedRoute) {}
 
     ngOnInit() {
-        this.userService.getAllUsers().subscribe(users => {
+        this.userService.getUsersByPost().subscribe(users => {
             this.users = users;
         });
         this.search$.pipe(
