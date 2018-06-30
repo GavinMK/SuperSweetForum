@@ -6,6 +6,7 @@ import {Router} from '@angular/router';
 import {checkAvailability} from '../username-validator.directive';
 import {UserService} from '../../users/user.service';
 import {User} from '../../models/user';
+import {switchMap, tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-thread-creator',
@@ -33,13 +34,39 @@ export class ThreadCreatorComponent implements OnInit {
     })
   }
 
+  newUser(thread: Thread): User{
+    return { id: undefined, name: thread.poster, totalPosts: 1}
+  }
+
+  updateUser(user: User, id: number): User{
+      user.totalPosts++;
+      user.recentPost = id;
+      return user;
+  }
+
+  changeUser(thread: Thread): void{
+    if(thread.poster != '') {
+      this.userService.getUserByName(thread.poster).pipe(
+        switchMap(user =>  !user.length ?
+          this.userService.addUser(this.newUser(thread)) : this.userService.updateUser(this.updateUser(user[0], thread.id)))
+      ).subscribe()
+    }
+  }
+
+  assignRecent(thread: Thread): Thread{
+    thread.mostRecent = thread.id;
+    return thread;
+  }
+
 
   save(thread: Thread){
     thread.isMainThread = true;
-    this.threadService.addThread(thread).subscribe(() => {
-      this.saved = true;
+    this.threadService.addThread(thread).pipe(
+      switchMap(thread => this.threadService.updateThread(this.assignRecent(thread)))).subscribe(reply =>{
+        this.saved = true;
+        this.changeUser(reply);
       this.router.navigate(["/threads"])
-    })
+    });
   }
 
 

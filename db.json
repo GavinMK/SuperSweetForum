@@ -3,91 +3,32 @@
     {
       "id": 0,
       "name": "Gavin",
-      "totalPosts": 120,
-      "recentPost": 1,
-      "bio": {
-        "email": "test0@email.com"
-      }
+      "totalPosts": 3,
+      "recentPost": 1
     },
     {
       "id": 1,
-      "name": "User2",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
+      "name": "Not Gavin",
+      "totalPosts": 1,
+      "recentPost": 31
     },
     {
-      "id": 2,
-      "name": "User3",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test2@email.com"
-      }
+      "name": "Joe Jilly",
+      "totalPosts": 1,
+      "recentPost": 33,
+      "id": 2
     },
     {
-      "id": 3,
-      "name": "User4",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test3@email.com"
-      }
+      "name": "Somber",
+      "totalPosts": 7,
+      "recentPost": 46,
+      "id": 3
     },
     {
-      "id": 4,
-      "name": "User5",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
-    },
-    {
-      "id": 5,
-      "name": "User6",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
-    },
-    {
-      "id": 6,
-      "name": "User7",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
-    },
-    {
-      "id": 7,
-      "name": "User8",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
-    },
-    {
-      "id": 8,
-      "name": "User9",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
-    },
-    {
-      "id": 9,
-      "name": "User10",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
-    },
-    {
-      "id": 10,
-      "name": "User11",
-      "totalPosts": 120,
-      "bio": {
-        "email": "test1@email.com"
-      }
+      "name": "Victor",
+      "totalPosts": 1,
+      "recentPost": 47,
+      "id": 4
     }
   ],
   "threads": [
@@ -101,17 +42,20 @@
       "replies": [
         {
           "id": 1,
+          "parentThreadId": 0,
           "body": "Hey Gavin, it's Gavin. Cool Forum",
           "poster": "Gavin",
           "isMainThread": false
         },
         {
           "body": "Let's see if this post works now, if it did, then it's id should be 2",
+          "parentThreadId": 0,
           "id": 2,
           "isMainThread": false
         },
         {
           "body": "If you're seeing this post, then that means my deactivation guard is working correctly!",
+          "parentThreadId": 0,
           "poster": "Not Gavin",
           "id": 3,
           "isMainThread": true
@@ -119,11 +63,13 @@
         {
           "title": "Super Cool Thread number 2!",
           "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
+          "parentThreadId": 0,
           "id": 4,
           "isMainThread": true
         },
         {
           "body": "THis is a reply to my post. It has to be longer",
+          "parentThreadId": 0,
           "poster": "",
           "isMainThread": false,
           "id": 13
@@ -154,14 +100,22 @@
       "title": "Super Cool Thread number 2!",
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
       "id": 4,
-      "mostRecent": 18,
+      "mostRecent": 47,
       "isMainThread": true,
       "replies": [
         {
           "body": "Reasonable length fo text digsjdgskd",
           "poster": "",
+          "parentThreadId": 4,
           "isMainThread": false,
           "id": 18
+        },
+        {
+          "body": "dsgksjgsdklfgjsdfklgjdfgklsdjgdksg",
+          "poster": "Victor",
+          "isMainThread": false,
+          "parentThreadId": 4,
+          "id": 47
         }
       ]
     },
@@ -201,6 +155,7 @@
           "poster": "",
           "isMainThread": false,
           "id": 9,
+          "parentThreadId": 8,
           "mostRecent": 9
         },
         {
@@ -208,6 +163,7 @@
           "poster": "",
           "isMainThread": false,
           "id": 10,
+          "parentThreadId": 8,
           "mostRecent": 10
         },
         {
@@ -215,7 +171,8 @@
           "poster": "",
           "isMainThread": false,
           "id": 11,
-          "mostRecent": 11
+          "mostRecent": 11,
+          "parentThreadId": 8
         }
       ]
     },
@@ -245,32 +202,43 @@
       "body": "New status thread, checking if these still work correctly after changed the architecture of the threads. ",
       "poster": "",
       "isMainThread": true,
-      "mostRecent": 17,
+      "mostRecent": 19,
       "id": 12,
       "replies": [
         {
           "body": "Heyyyyy What is isssssssssssssss",
           "poster": "",
           "isMainThread": false,
+          "parentThreadId": 12,
           "id": 14
         },
         {
           "body": "I CANT BELIEVE IT ACTUALLY WORKED ON THE FIRST TIME",
           "poster": "",
           "isMainThread": false,
+          "parentThreadId": 12,
           "id": 15
         },
         {
           "body": "now I just need to implement replying to other replies and we should be all good for today!",
           "poster": "",
           "isMainThread": false,
+          "parentThreadId": 12,
           "id": 16
         },
         {
           "body": "I haven't actually made a very long post yet so I'm going to post one now to make sure the post doesn't look ridiculous when there are many words. I don't quite know what to do to take up all of this space, so I guess I'll just copy and paste some text:\n\nWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall Wall of text",
           "poster": "",
           "isMainThread": false,
+          "parentThreadId": 12,
           "id": 17
+        },
+        {
+          "body": "If my new changes were successful, then this post should be tied to a new user that I shall call \"joe\"",
+          "poster": "Joe",
+          "isMainThread": false,
+          "parentThreadId": 12,
+          "id": 19
         }
       ]
     },
@@ -306,10 +274,120 @@
       "id": 17
     },
     {
-      "body": "Reasonable length fo text digsjdgskd",
+      "title": "blahblah",
+      "body": "blach what is this i dont even know anymore im just typing randomly haha what why isnt this 100 yetgb",
+      "isMainThread": true,
       "poster": "",
+      "id": 23,
+      "mostRecent": 23
+    },
+    {
+      "title": "im very silly",
+      "body": "I just spent a very long time trying to figure out why users weren't being assigned to their new posts.... turned out I forgot to subscribe to my observable the entire time :c",
+      "poster": "Joe Jilly",
+      "isMainThread": true,
+      "id": 31,
+      "mostRecent": 46,
+      "replies": [
+        {
+          "body": "Buuuuut hopefully it paid off, if I'm lucky, then this reply should work the same",
+          "poster": "Somber",
+          "isMainThread": false,
+          "id": 32
+        },
+        {
+          "body": "I forgot about our new changes to the structure of a thread internally though. Hopefully, this reply knows who it's parent is now instead of the main post being the only one to know about replies. I'm tempted to just wipe the database since none of the old posts have that field now, but i'm sort of liking how this is basically a development log now.",
+          "poster": "Somber",
+          "isMainThread": false,
+          "parentThreadId": 31,
+          "id": 33
+        },
+        {
+          "body": "looks like it didn't work as intended, let's see if it does this itme around",
+          "poster": "Somber",
+          "isMainThread": false,
+          "parentThreadId": 31,
+          "id": 34
+        },
+        {
+          "body": "Okay I think i fixed it for real this time haha (plz)",
+          "poster": "Somber",
+          "isMainThread": false,
+          "parentThreadId": 31,
+          "id": 35
+        },
+        {
+          "body": "Okay, for REAL this tine. I promise ",
+          "poster": "Somber",
+          "isMainThread": false,
+          "parentThreadId": 31,
+          "id": 36
+        },
+        {
+          "body": "^ Just kidding haha, but I did fix it, and it was a truly stupid mistake. Oh well",
+          "poster": "Somber",
+          "isMainThread": false,
+          "parentThreadId": 31,
+          "id": 46
+        }
+      ]
+    },
+    {
+      "body": "Buuuuut hopefully it paid off, if I'm lucky, then this reply should work the same",
+      "poster": "Somber",
       "isMainThread": false,
-      "id": 18
+      "parentThreadId": 31,
+      "id": 32
+    },
+    {
+      "body": "I forgot about our new changes to the structure of a thread internally though. Hopefully, this reply knows who it's parent is now instead of the main post being the only one to know about replies. I'm tempted to just wipe the database since none of the old posts have that field now, but i'm sort of liking how this is basically a development log now.",
+      "poster": "Somber",
+      "isMainThread": false,
+      "parentThreadId": 31,
+      "id": 33
+    },
+    {
+      "body": "looks like it didn't work as intended, let's see if it does this itme around",
+      "poster": "Somber",
+      "isMainThread": false,
+      "parentThreadId": 31,
+      "id": 34
+    },
+    {
+      "body": "Okay I think i fixed it for real this time haha (plz)",
+      "poster": "Somber",
+      "isMainThread": false,
+      "parentThreadId": 31,
+      "id": 35
+    },
+    {
+      "body": "Okay, for REAL this tine. I promise ",
+      "poster": "Somber",
+      "isMainThread": false,
+      "parentThreadId": 31,
+      "id": 36
+    },
+    {
+      "title": "I think I finally got it",
+      "body": "This whole time I was being a doofus and forgot that searching from the server returns an array of response, so I was trying to access a property of a single object and modify it, which cause my object to malform",
+      "poster": "Somber",
+      "isMainThread": true,
+      "id": 45,
+      "mostRecent": 45
+    },
+    {
+      "body": "^ Just kidding haha, but I did fix it, and it was a truly stupid mistake. Oh well",
+      "poster": "Somber",
+      "isMainThread": false,
+      "parentThreadId": 31,
+      "id": 46
+    },
+    {
+      "body": "dsgksjgsdklfgjsdfklgjdfgklsdjgdksg",
+      "poster": "Victor",
+      "isMainThread": false,
+      "parentThreadId": 4,
+      "id": 47
     }
   ]
 }

@@ -6,6 +6,7 @@ export interface Reply {
 
 export interface Thread {
   id: number;
+  parentThreadId?: number;
   title?: string;
   body: string;
   isMainThread: boolean;

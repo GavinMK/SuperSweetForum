@@ -25,7 +25,7 @@ export class ThreadsService {
   }
 
   getMainThreadsByPoster(username: string): Observable<Thread[]> {
-    return this.http.get<Thread[]>(`${this.apiPath}/threads?poster=${username}`);
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?isMainThread=true&poster=${username}`);
   }
 
   getMainThreads(): Observable<Thread[]>{
@@ -45,7 +45,7 @@ export class ThreadsService {
   }
 
   rawSearchByPoster(poster: string, term: string): Observable<Thread[]>{
-    return this.http.get<Thread[]>(`${this.apiPath}/threads?poster=${poster}&&q=${term}`)
+    return this.http.get<Thread[]>(`${this.apiPath}/threads?poster=${poster}&q=${term}&isMainThread=true`)
   }
 
   search(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{
@@ -60,8 +60,8 @@ export class ThreadsService {
     return this.http.get<Thread[]>(`${this.apiPath}/threads?q=${term}&isMainThread=true`)
   }
 
-  searchMain(terms$: Observable<string>, deboune = 200): Observable<Thread[]>{
-    return terms$.pipe(debounceTime(deboune), distinctUntilChanged(), switchMap(terms => this.rawMain(terms)));
+  searchMain(terms$: Observable<string>, debounce = 200): Observable<Thread[]>{
+    return terms$.pipe(debounceTime(debounce), distinctUntilChanged(), switchMap(terms => this.rawMain(terms)));
   }
 
   getAllThreadsByOrder(order: number) {
