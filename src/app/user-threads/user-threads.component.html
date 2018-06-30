@@ -15,7 +15,7 @@
         Replies: {{ thread.replies ? thread.replies.length : "0 (ಥ﹏ಥ)" }}</p>
     </mat-card-content>
 </mat-card>
-<mat-card>
+<mat-card *ngIf="(thread$ | async)?.length === 0">
   No threads.
 </mat-card>
   

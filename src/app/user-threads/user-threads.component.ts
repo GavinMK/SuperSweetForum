@@ -24,19 +24,14 @@ export class UserThreadsComponent implements OnInit {
   ngOnInit() {
 
     const user$ = this.route.params.pipe(
-      switchMap(paramMap => this.userService.getUser(paramMap['id'])),
-      share()
+      switchMap(paramMap => this.userService.getUser(paramMap['id']))
     );
 
-    const initial$ =  user$.pipe(
-      switchMap(user => this.threadService.getAllThreadsForGivenUsername(user.name))
-    )
-
-    const search$ = user$.pipe(
-      switchMap(user => this.threadService.searchByPoster(user.name, this.term$))
+    this.thread$ = user$.pipe(
+      switchMap(user => this.threadService.searchByPoster(user.name, this.term$.pipe(
+        startWith("")
+      )))
     );
-
-    this.thread$ = concat(initial$, search$);
 
   }
 
