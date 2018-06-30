@@ -95,62 +95,206 @@
       "title": "Gavin's Cool Post",
       "body": "This is the first post on this super sweet forum!",
       "poster": "Gavin",
+      "mostRecent": 13,
+      "isMainThread": true,
       "replies": [
         {
-          "id": "0:0",
-          "body": "Hey Gavin, it's Gavin. Cool Forum"
+          "id": 1,
+          "body": "Hey Gavin, it's Gavin. Cool Forum",
+          "poster": "Gavin",
+          "isMainThread": false
         },
         {
-          "body": "Let's see if this post works now, if it did, then it's id should be 0:1 ",
-          "poster": "",
-          "id": "0:1"
+          "body": "Let's see if this post works now, if it did, then it's id should be 2",
+          "id": 2,
+          "isMainThread": false
         },
         {
           "body": "If you're seeing this post, then that means my deactivation guard is working correctly!",
           "poster": "Not Gavin",
-          "id": "0:2"
+          "id": 3,
+          "isMainThread": true
+        },
+        {
+          "title": "Super Cool Thread number 2!",
+          "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
+          "id": 4,
+          "isMainThread": true
+        },
+        {
+          "body": "THis is a reply to my post. It has to be longer",
+          "poster": "",
+          "isMainThread": false,
+          "id": 13
         }
       ]
     },
     {
+      "id": 1,
+      "body": "Hey Gavin, it's Gavin. Cool Forum",
+      "poster": "Gavin",
+      "mostRecent": 1,
+      "isMainThread": false
+    },
+    {
+      "body": "Let's see if this post works now, if it did, then it's id should be 2",
+      "id": 2,
+      "mostRecent": 2,
+      "isMainThread": false
+    },
+    {
+      "body": "If you're seeing this post, then that means my deactivation guard is working correctly!",
+      "poster": "Not Gavin",
+      "id": 3,
+      "mostRecent": 3,
+      "isMainThread": false
+    },
+    {
       "title": "Super Cool Thread number 2!",
       "body": "I'm just posting here to make sure my validators work. Hopefully, I shouldn't be able to post this unless it's over 100 characters long, which it is now, so hopefully it appears on the threads list!",
-      "id": 1
+      "id": 4,
+      "mostRecent": 4,
+      "isMainThread": true
     },
     {
       "title": "Log number three",
       "body": "This is an example post again. It needs to have at least 100 characters or it will not let me press the post butotn. Now that it does, I can.",
-      "id": 2
+      "id": 5,
+      "mostRecent": 5,
+      "isMainThread": true
     },
     {
       "title": "Gavin New Post",
       "body": "I spent too long trying to figure this out! :C but its okay now since the editor is now reachable by the rest of the app",
       "poster": "",
-      "id": 3
+      "id": 6,
+      "mostRecent": 6,
+      "isMainThread": true
     },
     {
       "title": "Random",
       "body": "I wonder if you're tired of seeing all of these random posts that I'm testing out the functionality of my app with",
       "poster": "",
-      "id": 4
+      "id": 7,
+      "mostRecent": 7,
+      "isMainThread": true
     },
     {
-      "title": "TTTTTTTTTTTEEEST",
-      "body": "TTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEESTTTTTTTTTTTTEEEST",
+      "title": "Somebody Once Told me",
+      "body": "That I could waste some time, by working over an hour on something. But it turned out that we didn't even need it and now I'm running low on time",
       "poster": "",
-      "id": 5
+      "isMainThread": true,
+      "id": 8,
+      "mostRecent": 8,
+      "replies": [
+        {
+          "body": "Hopefully that fixed it. If it didn't, ima be very sad :c",
+          "poster": "",
+          "isMainThread": false,
+          "id": 9,
+          "mostRecent": 9
+        },
+        {
+          "body": "I can be really silly sometimes. I need to pay more attention to what I write. You know how long I spent trying to figure out what was wrong just to see that I forgot to delete a line I meant to?",
+          "poster": "",
+          "isMainThread": false,
+          "id": 10,
+          "mostRecent": 10
+        },
+        {
+          "body": "Hopefully this works on the first try for a change. The form has been slightly modified.",
+          "poster": "",
+          "isMainThread": false,
+          "id": 11,
+          "mostRecent": 11
+        }
+      ]
     },
     {
-      "title": "TTEST",
-      "body": "TEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEETTEEEEEEEET",
-      "poster": "USERNAME",
-      "id": 6
+      "body": "Hopefully that fixed it. If it didn't, ima be very sad :c",
+      "poster": "",
+      "isMainThread": false,
+      "id": 9,
+      "mostRecent": 9
     },
     {
-      "title": "What even is this",
-      "body": "kjkhjkhjkhkjhjhkjkhjkhjkhjkhjkjhkhjkkhjjkhjkhjkhjkhjkhjkhhjhkhkjjkjkhjkhjkhjkhjkhjkhjkhkjhkhjjkhkjjhjkhjkkjh",
-      "poster": "lol",
-      "id": 7
+      "body": "I can be really silly sometimes. I need to pay more attention to what I write. You know how long I spent trying to figure out what was wrong just to see that I forgot to delete a line I meant to?",
+      "poster": "",
+      "isMainThread": false,
+      "id": 10,
+      "mostRecent": 10
+    },
+    {
+      "body": "Hopefully this works on the first try for a change. The form has been slightly modified.",
+      "poster": "",
+      "isMainThread": false,
+      "id": 11,
+      "mostRecent": 11
+    },
+    {
+      "title": "New status thread",
+      "body": "New status thread, checking if these still work correctly after changed the architecture of the threads. ",
+      "poster": "",
+      "isMainThread": true,
+      "mostRecent": 17,
+      "id": 12,
+      "replies": [
+        {
+          "body": "Heyyyyy What is isssssssssssssss",
+          "poster": "",
+          "isMainThread": false,
+          "id": 14
+        },
+        {
+          "body": "I CANT BELIEVE IT ACTUALLY WORKED ON THE FIRST TIME",
+          "poster": "",
+          "isMainThread": false,
+          "id": 15
+        },
+        {
+          "body": "now I just need to implement replying to other replies and we should be all good for today!",
+          "poster": "",
+          "isMainThread": false,
+          "id": 16
+        },
+        {
+          "body": "I haven't actually made a very long post yet so I'm going to post one now to make sure the post doesn't look ridiculous when there are many words. I don't quite know what to do to take up all of this space, so I guess I'll just copy and paste some text:\n\nWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall Wall of text",
+          "poster": "",
+          "isMainThread": false,
+          "id": 17
+        }
+      ]
+    },
+    {
+      "body": "THis is a reply to my post. It has to be longer",
+      "poster": "",
+      "isMainThread": false,
+      "mostRecent": 13,
+      "id": 13
+    },
+    {
+      "body": "Heyyyyy What is isssssssssssssss",
+      "poster": "",
+      "isMainThread": false,
+      "id": 14
+    },
+    {
+      "body": "I CANT BELIEVE IT ACTUALLY WORKED ON THE FIRST TIME",
+      "poster": "",
+      "isMainThread": false,
+      "id": 15
+    },
+    {
+      "body": "now I just need to implement replying to other replies and we should be all good for today!",
+      "poster": "",
+      "isMainThread": false,
+      "id": 16
+    },
+    {
+      "body": "I haven't actually made a very long post yet so I'm going to post one now to make sure the post doesn't look ridiculous when there are many words. I don't quite know what to do to take up all of this space, so I guess I'll just copy and paste some text:\n\nWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall Wall of text",
+      "poster": "",
+      "isMainThread": false,
+      "id": 17
     }
   ]
 }

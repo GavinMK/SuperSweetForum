@@ -12,6 +12,7 @@
 <mat-card class="reply" *ngFor="let reply of thread.replies">
   <mat-card-content class="reply">
     <mat-card-subtitle class="replyPost">Posted by: {{ reply.poster ? reply.poster : "Anonymous"}}</mat-card-subtitle>
+    <!--<button mat-button (click)="reply.emit(reply.id)">Reply to This Thread</button>-->
     {{ reply.body }}
   </mat-card-content>
 </mat-card>

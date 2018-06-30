@@ -1,14 +1,7 @@
 <mat-toolbar color="accent">
     <div fxLayout fxLayoutAlign="space-between center" fxFlex>
       <a routerLink="/" class="mainPageLink">(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Super Sweet Forum! ✧ﾟ･: *ヽ(◕ヮ◕ヽ)</a>
-    </div>
-    <div fxLayout>
-        <button color="primary" mat-button *ngIf="!loggedUser" (click)="showLoginDialog()">
-            LOGIN
-        </button>
-        <button color="warn" mat-button *ngIf="loggedUser" (click)="logout()">
-            LOGOUT - {{loggedUser?.name}}
-        </button>
+      <p class="descriptionMsg">The only internet forum with no organization and too many emojis!</p>
     </div>
 </mat-toolbar>
 <div>

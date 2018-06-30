@@ -17,8 +17,8 @@ export class TopicPageComponent implements OnInit {
   constructor(private threadService: ThreadsService) { }
 
   ngOnInit() {
-    const initial$ = this.threadService.getThreads();
-    const search$ = this.threadService.search(this.term$);
+    const initial$ = this.threadService.getMainThreadsbyId();
+    const search$ = this.threadService.searchMain(this.term$);
     this.thread$ = concat(initial$, search$);
   }
 

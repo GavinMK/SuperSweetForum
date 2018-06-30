@@ -9,7 +9,7 @@
   </mat-form-field>
       <mat-card>
   <mat-form-field fxFlex [color]="form.get('body').errors ? 'warn' : 'primary'">
-    <input matInput formControlName="body" type="text" placeholder="Type your post here!">
+    <textarea matInput formControlName="body" type="text" placeholder="Type your post here!"></textarea>
     <mat-hint align="end" *ngIf="!form.get('body').valid && !form.get('body').pristine">
       <ng-container *ngIf="form.get('body').hasError('maxlength')">
         ｡゜(｀Д´)゜｡ Your post is way too long buddy!
