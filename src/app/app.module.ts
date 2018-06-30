@@ -36,6 +36,7 @@ import { LoginDialogComponent } from './login/login-dialog.component';
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 import { PostCreatorConfirmDialogComponent } from './threads/post-creator-confirm-dialog/post-creator-confirm-dialog.component';
 import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-container.component';
+import { UserThreadsComponent } from './user-threads/user-threads.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-
     ReplyCreatorComponent,
     PostCreatorConfirmDialogComponent,
     AppToolbarContainerComponent,
-    LoginDialogComponent
+    LoginDialogComponent,
+    UserThreadsComponent
   ],
   entryComponents: [
     LoginDialogComponent,

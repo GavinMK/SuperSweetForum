@@ -14,6 +14,7 @@ import { RecentThreadsComponent } from './recent-threads/recent-threads.componen
 import {PostCreatorDeactivateGuard} from './threads/post-creator-deactivate-guard.service';
 
 import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-container.component';
+import { UserThreadsComponent } from './user-threads/user-threads.component';
 
 export const APP_ROUTES: Routes = [
   {
@@ -25,12 +26,16 @@ export const APP_ROUTES: Routes = [
       {
         path: 'users', component: UsersDashboardComponent, children: [
           {
-            path: '', redirectTo: '0', pathMatch: 'full'},
+            path: '', redirectTo: '0', pathMatch: 'full'
+          },
+          {
+            path: ':id/threads', component: UserThreadsComponent
+          },
           {
             path: ':id', component: UserDetailComponent, resolve: {
               user: UsersResolver
           }
-        },
+        }
       ]},
       { path: '', redirectTo: 'threads', pathMatch: 'full'},
       { path: 'threads', component: ThreadsComponent, children: [
