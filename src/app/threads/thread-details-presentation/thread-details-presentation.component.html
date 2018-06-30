@@ -1,28 +1,27 @@
 <div fxLayout="column">
-<mat-card class="mainPost">
-  <mat-card-title-group>
-    <mat-card-title *ngIf="thread.isMainThread">{{ thread.title }}</mat-card-title>
-    <mat-card-title *ngIf="!thread.isMainThread">
-      <a mat-button class="custom-button" color="accent" [routerLink]="['/threads',thread.parentThreadId]">[ This thread is a reply to another. Click here to view it ]</a>
-    </mat-card-title>
-    <mat-card-subtitle>Posted by: {{ thread.poster ? thread.poster : "Anonymous"}}</mat-card-subtitle>
-    <button mat-button class="custom-button" color="accent" (click)="reply2.emit(thread.id)">Reply to This Thread</button>
-  </mat-card-title-group>
-  <mat-card-content>
-    {{ thread.body }}
-  </mat-card-content>
-</mat-card>
-<mat-card class="reply" *ngFor="let reply of thread.replies">
-  <mat-card-title-group>
+  <mat-card class="mainPost">
+    <mat-card-title-group>
+      <mat-card-title *ngIf="thread.isMainThread">{{ thread.title }}</mat-card-title>
+      <mat-card-title *ngIf="!thread.isMainThread">
+        <a mat-button class="custom-button" color="accent" [routerLink]="['/threads',thread.parentThreadId]">[ This thread is a reply to another. Click here to view it ]</a>
+      </mat-card-title>
+      <mat-card-subtitle>Posted by: {{ thread.poster ? thread.poster : "Anonymous"}}</mat-card-subtitle>
+      <button mat-button class="custom-button" color="accent" (click)="reply2.emit(thread.id)">Reply to This Thread</button>
+    </mat-card-title-group>
+    <mat-card-content>
+      {{ thread.body }}
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="reply" *ngFor="let reply of replies">
     <a *ngIf="reply.replies" color="accent" class="custom-button" mat-button [routerLink]="['/threads', reply.id]">View </a>
-    <mat-card-subtitle class="replyPost">Posted by: {{ reply.poster ? reply.poster : "Anonymous"}}<br>
-      Replies: {{ reply.replies ? reply.replies.length : "0 (ಥ﹏ಥ)" }} </mat-card-subtitle>
-  <button mat-button class="custom-button" color="accent" (click)="reply2.emit(reply.id)">Reply</button>
-  </mat-card-title-group>
-  <mat-card-content class="reply">
-    <!--<button mat-button (click)="reply.emit(reply.id)">Reply to This Thread</button>-->
-    {{ reply.body }}
-  </mat-card-content>
-</mat-card>
+    <mat-card-title-group>
+      <mat-card-subtitle class="replyPost">Posted by: {{ reply.poster ? reply.poster : "Anonymous"}}<br>
+        Replies: {{ reply.replies ? reply.replies.length : "0 (ಥ﹏ಥ)" }} </mat-card-subtitle>
+      <button mat-button class="custom-button" color="accent" (click)="reply2.emit(reply.id)">Reply</button>
+    </mat-card-title-group>
+    <mat-card-content class="reply">
+      <!--<button mat-button (click)="reply.emit(reply.id)">Reply to This Thread</button>-->
+      {{ reply.body }}
+    </mat-card-content>
+  </mat-card>
 </div>
-

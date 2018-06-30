@@ -39,6 +39,7 @@ import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-
 import { UserThreadsComponent } from './user-threads/user-threads.component';
 
 import {ThreadsGuard} from './threads/threads-activate.guard.service';
+import {ReplyResolver} from './threads/replies.resolver';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import {ThreadsGuard} from './threads/threads-activate.guard.service';
     ThreadsService,
     { provide: API_PATH, useValue: 'http://localhost:3000'},
     ThreadsResolver,
+    ReplyResolver,
     UsersResolver,
     PostCreatorDeactivateGuard,
     ThreadsGuard

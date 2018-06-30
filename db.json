@@ -40,30 +40,7 @@
       "mostRecent": 49,
       "isMainThread": true,
       "replies": [
-        {
-          "id": 1,
-          "parentThreadId": 0,
-          "title": "Reply to: [Gavin's Cool Post]",
-          "body": "Hey Gavin, it's Gavin. Cool Forum",
-          "poster": "Gavin",
-          "isMainThread": false
-        },
-        {
-          "body": "If you're seeing this post, then that means my deactivation guard is working correctly!",
-          "parentThreadId": 0,
-          "poster": "Not Gavin",
-          "title": "Reply to: [Gavin's Cool Post]",
-          "id": 3,
-          "isMainThread": false
-        },
-        {
-          "body": "Bumping threads actually works now, and I also want to test if this moves my name to the top of the users list cause at this point in time I should be the most recent poster.",
-          "poster": "Gavin",
-          "isMainThread": false,
-          "parentThreadId": 0,
-          "title": "Reply to: [Gavin's Cool Post]",
-          "id": 48
-        }
+        1,3,48
       ]
     },
     {
@@ -75,14 +52,7 @@
       "mostRecent": 49,
       "isMainThread": false,
       "replies": [
-        {
-          "body": "This is my attempt to reply to another reply. Hopefully it works",
-          "poster": "Gavin",
-          "isMainThread": false,
-          "parentThreadId": 1,
-          "title": "Reply to: [Reply to: [Gavin's Cool Post]]",
-          "id": 49
-        }
+        49
       ]
     },
     {
@@ -125,38 +95,7 @@
       "mostRecent": 50,
       "id": 12,
       "replies": [
-        {
-          "body": "Heyyyyy What is isssssssssssssss",
-          "title": "Reply to: [New status thread]",
-          "poster": "",
-          "isMainThread": false,
-          "parentThreadId": 12,
-          "id": 14
-        },
-        {
-          "body": "I CANT BELIEVE IT ACTUALLY WORKED ON THE FIRST TIME",
-          "title": "Reply to: [New status thread]",
-          "poster": "",
-          "isMainThread": false,
-          "parentThreadId": 12,
-          "id": 15
-        },
-        {
-          "body": "I haven't actually made a very long post yet so I'm going to post one now to make sure the post doesn't look ridiculous when there are many words. I don't quite know what to do to take up all of this space, so I guess I'll just copy and paste some text:\n\nWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall of textWall Wall of text",
-          "poster": "",
-          "title": "Reply to: [New status thread]",
-          "isMainThread": false,
-          "parentThreadId": 12,
-          "id": 17
-        },
-        {
-          "body": "Well I had to go through and manually update all of the posts I wanted to keep so that they were compatible with all of the changes I made to the internal models. That was fun. Gave me an excuse to delete a lot of random posts floating around",
-          "poster": "Gavin",
-          "isMainThread": false,
-          "parentThreadId": 12,
-          "title": "Reply to: [New status thread]",
-          "id": 50
-        }
+        14,15,17,50
       ]
     },
     {
@@ -215,22 +154,7 @@
       "id": 51,
       "mostRecent": 53,
       "replies": [
-        {
-          "body": "asdkjhaskjldasdjlkasjdklsakfjlksjfkljsdklf",
-          "poster": "",
-          "isMainThread": false,
-          "parentThreadId": 51,
-          "title": "Reply to: [WHATS UPPPPPPPPPPPPPPPPP!!!!!]",
-          "id": 52
-        },
-        {
-          "body": "asjhdjksahdashjshfjsdjfhjsdkfjkdshfjsdk",
-          "poster": "Victor",
-          "isMainThread": false,
-          "parentThreadId": 51,
-          "title": "Reply to: [WHATS UPPPPPPPPPPPPPPPPP!!!!!]",
-          "id": 53
-        }
+        52,53
       ]
     },
     {
@@ -249,14 +173,7 @@
       "title": "Reply to: [WHATS UPPPPPPPPPPPPPPPPP!!!!!]",
       "id": 53,
       "replies": [
-        {
-          "body": "jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj",
-          "poster": "",
-          "isMainThread": false,
-          "parentThreadId": 53,
-          "title": "Reply to: [Reply to: [WHATS UPPPPPPPPPPPPPPPPP!!!!!]]",
-          "id": 54
-        }
+        54
       ],
       "mostRecent": 54
     },

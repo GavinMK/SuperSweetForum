@@ -17,6 +17,7 @@ import {AppToolbarContainerComponent} from './app-toolbar-container/app-toolbar-
 import { UserThreadsComponent } from './user-threads/user-threads.component';
 
 import {ThreadsGuard} from './threads/threads-activate.guard.service';
+import {ReplyResolver} from './threads/replies.resolver';
 
 export const APP_ROUTES: Routes = [
   {
@@ -43,7 +44,7 @@ export const APP_ROUTES: Routes = [
       { path: 'threads', component: ThreadsComponent, children: [
           { path: '', component: TopicPageComponent },
           { path: 'new', component: ThreadCreatorComponent, canDeactivate: [PostCreatorDeactivateGuard] },
-          { path: ':id', component: ThreadDetailsComponent, canActivate: [ThreadsGuard], resolve: { thread: ThreadsResolver }},
+          { path: ':id', component: ThreadDetailsComponent, canActivate: [ThreadsGuard], resolve: { thread: ThreadsResolver, replies: ReplyResolver }},
           { path: ':id/reply', component: ReplyCreatorComponent, canActivate: [ThreadsGuard], resolve: { thread: ThreadsResolver}, canDeactivate: [PostCreatorDeactivateGuard] }
         ] },
       { path: '**', redirectTo: '/' }

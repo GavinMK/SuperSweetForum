@@ -11,6 +11,10 @@
   font-size: 20px;
   color: black;
 }
+
+.linkButton:hover{
+  background-color: cornsilk;
+}
 .threadName{
   background-color: cornsilk;
 }

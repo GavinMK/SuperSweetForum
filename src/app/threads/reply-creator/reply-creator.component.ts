@@ -44,7 +44,7 @@ export class ReplyCreatorComponent implements OnInit {
   }
 
   addReply(reply: Thread): Thread{
-    this.thread.replies ? this.thread.replies.push(reply) : this.thread.replies = [reply];
+    this.thread.replies ? this.thread.replies.push(reply.id) : this.thread.replies = [reply.id];
     this.thread.mostRecent = reply.id;
     this.changeUser(reply);
     return this.thread

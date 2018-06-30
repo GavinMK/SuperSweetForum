@@ -11,7 +11,7 @@ export interface Thread {
   body: string;
   isMainThread: boolean;
   mostRecent: number;
-  replies?: Thread[];
+  replies?: number[];
   poster?: string;
 }
 
