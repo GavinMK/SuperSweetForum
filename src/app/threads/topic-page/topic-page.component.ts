@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Thread} from '../../models/thread';
 import {concat, Observable, Subject} from 'rxjs';
 import {ThreadsService} from '../threads.service';
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-topic-page',

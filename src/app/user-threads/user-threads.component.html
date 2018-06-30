@@ -1,0 +1,21 @@
+<mat-toolbar>
+    <mat-form-field fxFlex color="primary" class="search">
+      <input title="search" matInput type="text"
+             (input)="term$.next($event.target.value)">
+      <mat-placeholder class="searchHolder">You can search for a thread here!</mat-placeholder>
+    </mat-form-field>
+    <button fxFlex mat-button routerLink="/threads/new">(☞ﾟヮﾟ)☞  Make a New Thread!  ☜(ﾟヮﾟ☜)</button>
+</mat-toolbar>
+<mat-card class="threadItem"  *ngFor="let thread of thread$ | async; trackBy: trackById">
+      <a class="linkButton" mat-button [routerLink]="['/threads', thread.id]">
+        <mat-card-title >{{ thread.title }}</mat-card-title>
+      </a>
+    <mat-card-content >
+      <p align="end">Posted by: {{ thread.poster ? thread.poster : "Anonymous"}}<br>
+        Replies: {{ thread.replies ? thread.replies.length : "0 (ಥ﹏ಥ)" }}</p>
+    </mat-card-content>
+</mat-card>
+<mat-card *ngIf="(thread$ | async)?.length === 0">
+  No threads.
+</mat-card>
+  
