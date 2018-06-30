@@ -74,6 +74,7 @@ export class ReplyCreatorComponent implements OnInit {
   save(reply: Thread){
     reply.isMainThread = false;
     reply.parentThreadId = this.thread.id;
+    reply.title = "Reply to: [" + this.thread.title + "]";
     this.threadService.addThread(reply).pipe(
       switchMap( replies => this.threadService.updateThread(this.addReply(replies)))).subscribe(
       () => {

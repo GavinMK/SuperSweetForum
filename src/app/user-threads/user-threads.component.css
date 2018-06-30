@@ -1,0 +1,22 @@
+.searchHolder{
+  color: gray;
+  font-size: 12px;
+}
+
+.threadItem{
+  margin-top:10px;
+}
+
+.linkButton{
+  font-size: 20px;
+}
+.threadName{
+  background-color: cornsilk;
+}
+
+.Main{
+}
+
+.Reply{
+  font-size:18px;
+}

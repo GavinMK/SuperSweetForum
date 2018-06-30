@@ -10,9 +10,7 @@ export class ThreadDetailsPresentationComponent implements OnInit {
 
   @Input() thread: Thread;
 
-  @Output() reply: EventEmitter<number> = new EventEmitter<number>();
-
-  @Output() back: EventEmitter<void> = new EventEmitter<void>();
+  @Output() reply2: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 

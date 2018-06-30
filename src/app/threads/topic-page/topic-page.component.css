@@ -13,3 +13,9 @@
 .threadName{
   background-color: cornsilk;
 }
+.threadInfo{
+  display:inline-block;
+  float:right;
+  color: gray;
+  font-size:14px
+}
