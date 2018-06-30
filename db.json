@@ -3,8 +3,8 @@
     {
       "id": 0,
       "name": "Gavin",
-      "totalPosts": 3,
-      "recentPost": 1
+      "totalPosts": 6,
+      "recentPost": 49
     },
     {
       "id": 1,
@@ -37,12 +37,13 @@
       "title": "Gavin's Cool Post",
       "body": "This is the first post on this super sweet forum!",
       "poster": "Gavin",
-      "mostRecent": 13,
+      "mostRecent": 49,
       "isMainThread": true,
       "replies": [
         {
           "id": 1,
           "parentThreadId": 0,
+          "title": "Reply to: [Gavin's Cool Post]",
           "body": "Hey Gavin, it's Gavin. Cool Forum",
           "poster": "Gavin",
           "isMainThread": false
@@ -73,15 +74,35 @@
           "poster": "",
           "isMainThread": false,
           "id": 13
+        },
+        {
+          "body": "Bumping threads actually works now, and I also want to test if this moves my name to the top of the users list cause at this point in time I should be the most recent poster.",
+          "poster": "Gavin",
+          "isMainThread": false,
+          "parentThreadId": 0,
+          "title": "Reply to: [Gavin's Cool Post]",
+          "id": 48
         }
       ]
     },
     {
       "id": 1,
       "body": "Hey Gavin, it's Gavin. Cool Forum",
+      "title": "Reply to: [Gavin's Cool Post]",
       "poster": "Gavin",
-      "mostRecent": 1,
-      "isMainThread": false
+      "parentThreadId": 0,
+      "mostRecent": 49,
+      "isMainThread": false,
+      "replies": [
+        {
+          "body": "This is my attempt to reply to another reply. Hopefully it works",
+          "poster": "Gavin",
+          "isMainThread": false,
+          "parentThreadId": 1,
+          "title": "Reply to: [Reply to: [Gavin's Cool Post]]",
+          "id": 49
+        }
+      ]
     },
     {
       "body": "Let's see if this post works now, if it did, then it's id should be 2",
@@ -388,6 +409,22 @@
       "isMainThread": false,
       "parentThreadId": 4,
       "id": 47
+    },
+    {
+      "body": "Bumping threads actually works now, and I also want to test if this moves my name to the top of the users list cause at this point in time I should be the most recent poster.",
+      "poster": "Gavin",
+      "isMainThread": false,
+      "parentThreadId": 0,
+      "title": "Reply to: [Gavin's Cool Post]",
+      "id": 48
+    },
+    {
+      "body": "This is my attempt to reply to another reply. Hopefully it works",
+      "poster": "Gavin",
+      "isMainThread": false,
+      "parentThreadId": 1,
+      "title": "Reply to: [Reply to: [Gavin's Cool Post]]",
+      "id": 49
     }
   ]
 }

@@ -29,7 +29,7 @@ export class ThreadDetailsComponent implements OnInit {
   }
 
   makeReply(event: number): void{
-    this.router.navigate([`../${event}/reply`], { relativeTo: this.route });
+    this.router.navigate(['/threads', event, 'reply']);
   }
 
 }
